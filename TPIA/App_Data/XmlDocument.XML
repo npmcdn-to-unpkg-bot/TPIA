@@ -396,6 +396,24 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="F:TPIA.BackEnd.NewsIndex.btn_Add">
+            <summary>
+            btn_Add 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
+        </member>
+        <member name="F:TPIA.BackEnd.NewsIndex.GridView1">
+            <summary>
+            GridView1 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
+        </member>
         <member name="T:TPIA.Controllers.Api.NewsController">
             <summary>
             最新消息 - Api
@@ -435,6 +453,96 @@
             取得最新消息 Title 列表
             </summary>
             <returns></returns>
+        </member>
+        <member name="F:TPIA.FrondEnd.NewsActivity.GridView1">
+            <summary>
+            GridView1 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
+        </member>
+        <member name="F:TPIA.FrondEnd.NewsProject.GridView1">
+            <summary>
+            GridView1 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
+        </member>
+        <member name="F:TPIA.FrondEnd.NewsClass.GridView1">
+            <summary>
+            GridView1 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
+        </member>
+        <member name="F:TPIA.FrondEnd.NewsShow.GridView1">
+            <summary>
+            GridView1 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
+        </member>
+        <member name="F:TPIA.FrondEnd.NewsIndustry.GridView1">
+            <summary>
+            GridView1 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
+        </member>
+        <member name="F:TPIA.FrondEnd.NewsGuild.GridView1">
+            <summary>
+            GridView1 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
+        </member>
+        <member name="F:TPIA.FrondEnd.Index.GridView1">
+            <summary>
+            GridView1 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
+        </member>
+        <member name="F:TPIA.FrondEnd.Main.head">
+            <summary>
+            head 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
+        </member>
+        <member name="F:TPIA.FrondEnd.Main.form1">
+            <summary>
+            form1 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
+        </member>
+        <member name="F:TPIA.FrondEnd.Main.ContentPlaceHolder1">
+            <summary>
+            ContentPlaceHolder1 控制項。
+            </summary>
+            <remarks>
+            自動產生的欄位。
+            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+            </remarks>
         </member>
     </members>
 </doc>

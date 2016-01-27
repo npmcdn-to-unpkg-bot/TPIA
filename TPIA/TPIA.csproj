@@ -200,8 +200,16 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="BackEnd\NewsIndex.aspx.cs">
+      <DependentUpon>NewsIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\NewsIndex.aspx.designer.cs">
+      <DependentUpon>NewsIndex.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Common\Adaptor\IWebApiAdaptor.cs" />
     <Compile Include="Common\Adaptor\TLApiAdaptor.cs" />
+    <Compile Include="Common\Convertor\ListToDataTable.cs" />
     <Compile Include="Common\DTO\News\AddNewsRequestDTO.cs" />
     <Compile Include="Common\DTO\News\DelNewsRequestDTO.cs" />
     <Compile Include="Common\DTO\News\EditNewsRequestDTO.cs" />
@@ -215,6 +223,62 @@
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Entity\NewsEntities.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="FrondEnd\NewsActivity.aspx.cs">
+      <DependentUpon>NewsActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrondEnd\NewsActivity.aspx.designer.cs">
+      <DependentUpon>NewsActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrondEnd\NewsProject.aspx.cs">
+      <DependentUpon>NewsProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrondEnd\NewsProject.aspx.designer.cs">
+      <DependentUpon>NewsProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrondEnd\NewsClass.aspx.cs">
+      <DependentUpon>NewsClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrondEnd\NewsClass.aspx.designer.cs">
+      <DependentUpon>NewsClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrondEnd\NewsShow.aspx.cs">
+      <DependentUpon>NewsShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrondEnd\NewsShow.aspx.designer.cs">
+      <DependentUpon>NewsShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrondEnd\NewsIndustry.aspx.cs">
+      <DependentUpon>NewsIndustry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrondEnd\NewsIndustry.aspx.designer.cs">
+      <DependentUpon>NewsIndustry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrondEnd\NewsGuild.aspx.cs">
+      <DependentUpon>NewsGuild.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrondEnd\NewsGuild.aspx.designer.cs">
+      <DependentUpon>NewsGuild.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrondEnd\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrondEnd\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrondEnd\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrondEnd\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -223,6 +287,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="BackEnd\NewsIndex.aspx" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -280,6 +345,13 @@
     <Content Include="CSS\content_box.css" />
     <Content Include="CSS\masonry-docs.css" />
     <Content Include="favicon.ico" />
+    <Content Include="FrondEnd\NewsActivity.aspx" />
+    <Content Include="FrondEnd\NewsProject.aspx" />
+    <Content Include="FrondEnd\NewsClass.aspx" />
+    <Content Include="FrondEnd\NewsShow.aspx" />
+    <Content Include="FrondEnd\NewsIndustry.aspx" />
+    <Content Include="FrondEnd\NewsGuild.aspx" />
+    <Content Include="FrondEnd\Index.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
@@ -293,6 +365,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="FrondEnd\Main.Master" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\TPIA\about1-1.jpg" />
     <Content Include="Images\TPIA\about1-2.jpg" />
