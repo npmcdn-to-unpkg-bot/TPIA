@@ -2,12 +2,26 @@
 
 namespace TPIA.Common.DTO.News
 {
-  public class GetNewsListReturnDTO
-  {
-    public int NewSID { get; set; }
-    public string NewSClass { get; set; }
-    public string NewSTitle { get; set; }
-    public string DwgUrl { get; set; }
-    public DateTime CreateDate { get; set; }
-  }
+    /// <summary>
+    /// 最新消息標題清單-回傳
+    /// </summary>
+    public class GetNewsListReturnDTO
+    {
+        /// <summary>
+        /// 消息編號
+        /// </summary>
+        public int NewsID { get; set; }
+        /// <summary>
+        /// 消息類別
+        /// </summary>
+        public string NewsCategory { get; set; }
+        /// <summary>
+        /// 消息標題
+        /// </summary>
+        public string NewsTitle { get; set; }
+        /// <summary>
+        /// 建立時間
+        /// </summary>
+        public DateTime CreateDate { get; set; }
+    }
 }

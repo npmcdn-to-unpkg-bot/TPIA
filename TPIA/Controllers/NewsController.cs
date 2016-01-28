@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TPIA.Common.DTO.News;
+using TPIA.Common.Enumeration;
 
 namespace TPIA.Controllers
 {
@@ -13,7 +14,7 @@ namespace TPIA.Controllers
     public class NewsController : Controller
     {
         private TPIA.Common.Adaptor.TLApiAdaptor _apiAdaptor = new TPIA.Common.Adaptor.TLApiAdaptor();
-                
+
         /// <summary>
         /// 取得 最新消息內文 - Web
         /// </summary>
@@ -22,9 +23,26 @@ namespace TPIA.Controllers
         [HttpGet]
         public ActionResult GetNewsContent(int NewsId)
         {
-            string url = "News/GetNewsTitleList";
+            string url = "api/News/GetNewsTitleList";
             GetNewsContentReturnDTO result = _apiAdaptor.Get<GetNewsContentReturnDTO>(url);
             return View();
         }
+
+        #region [ BackEnd ]
+
+        public ActionResult AddNews()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddNews(AddNewsRequestDTO dto)
+        {
+            string url = "api/News/AddNews";
+            enErrorCode result = _apiAdaptor.Post<AddNewsRequestDTO, enErrorCode>(url, dto);
+
+            return View();
+        }
+        #endregion
     }
 }

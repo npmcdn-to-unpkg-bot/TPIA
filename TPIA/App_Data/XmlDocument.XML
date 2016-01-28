@@ -414,6 +414,131 @@
             將移動欄位宣告從設計檔案修改為程式碼後置檔案。
             </remarks>
         </member>
+        <member name="T:TPIA.Common.DTO.News.AddNewsRequestDTO">
+            <summary>
+            新增最新消息
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.AddNewsRequestDTO.Category">
+            <summary>
+            消息類別
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.AddNewsRequestDTO.Title">
+            <summary>
+            消息標題
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.AddNewsRequestDTO.NewsContent">
+            <summary>
+            消息內文
+            </summary>
+        </member>
+        <member name="T:TPIA.Common.DTO.News.EditNewsRequestDTO">
+            <summary>
+            編輯消息
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.EditNewsRequestDTO.NewsID">
+            <summary>
+            消息編號
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.EditNewsRequestDTO.Category">
+            <summary>
+            消息類別
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.EditNewsRequestDTO.Title">
+            <summary>
+            消息標題
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.EditNewsRequestDTO.NewsContent">
+            <summary>
+            消息內文
+            </summary>
+        </member>
+        <member name="T:TPIA.Common.DTO.News.GetNewsContentReturnDTO">
+            <summary>
+            最新消息內文-回傳
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.GetNewsContentReturnDTO.NewsTitle">
+            <summary>
+            消息標題
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.GetNewsContentReturnDTO.NewsContent">
+            <summary>
+            消息內文
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.GetNewsContentReturnDTO.CreateDate">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="T:TPIA.Common.DTO.News.GetNewsListReturnDTO">
+            <summary>
+            最新消息標題清單-回傳
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.GetNewsListReturnDTO.NewsID">
+            <summary>
+            消息編號
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.GetNewsListReturnDTO.NewsCategory">
+            <summary>
+            消息類別
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.GetNewsListReturnDTO.NewsTitle">
+            <summary>
+            消息標題
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.GetNewsListReturnDTO.CreateDate">
+            <summary>
+            建立時間
+            </summary>
+        </member>
+        <member name="T:TPIA.Common.Enumeration.enNewsCategory">
+            <summary>
+            消息類別
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enNewsCategory.Activity">
+            <summary>
+            產業快訊
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enNewsCategory.Class">
+            <summary>
+            研習課程
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enNewsCategory.Guild">
+            <summary>
+            公會消息
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enNewsCategory.Industry">
+            <summary>
+            活動快訊
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enNewsCategory.Project">
+            <summary>
+            專業發表
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enNewsCategory.Show">
+            <summary>
+            展覽通知
+            </summary>
+        </member>
         <member name="T:TPIA.Controllers.Api.NewsController">
             <summary>
             最新消息 - Api
@@ -423,6 +548,13 @@
             <summary>
             取得 最新消息標題清單
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.Api.NewsController.GetNewsContent(System.Int32)">
+            <summary>
+            取得 最新消息內文
+            </summary>
+            <param name="NewsID"></param>
             <returns></returns>
         </member>
         <member name="T:TPIA.Controllers.HomeController">
@@ -448,11 +580,75 @@
             <param name="NewsId"></param>
             <returns></returns>
         </member>
-        <member name="M:TPIA.Entiy.NewsEntities.GetNewsList">
+        <member name="T:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySetsb46ce1e3d88f638da30bc3981132c5920bf0cc5e01d1919cf2e2df8e1b74243a">
             <summary>
-            取得最新消息 Title 列表
+            Implements a mapping view cache.
             </summary>
-            <returns></returns>
+        </member>
+        <member name="M:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySetsb46ce1e3d88f638da30bc3981132c5920bf0cc5e01d1919cf2e2df8e1b74243a.GetView(System.Data.Entity.Core.Metadata.Edm.EntitySetBase)">
+            <summary>
+            Gets a view corresponding to the specified extent.
+            </summary>
+            <param name="extent">The extent.</param>
+            <returns>The mapping view, or null if the extent is not associated with a mapping view.</returns>
+        </member>
+        <member name="M:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySetsb46ce1e3d88f638da30bc3981132c5920bf0cc5e01d1919cf2e2df8e1b74243a.GetView0">
+            <summary>
+            Gets the view for CodeFirstDatabase.Company.
+            </summary>
+            <returns>The mapping view.</returns>
+        </member>
+        <member name="M:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySetsb46ce1e3d88f638da30bc3981132c5920bf0cc5e01d1919cf2e2df8e1b74243a.GetView1">
+            <summary>
+            Gets the view for CodeFirstDatabase.CompanyProduct.
+            </summary>
+            <returns>The mapping view.</returns>
+        </member>
+        <member name="M:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySetsb46ce1e3d88f638da30bc3981132c5920bf0cc5e01d1919cf2e2df8e1b74243a.GetView2">
+            <summary>
+            Gets the view for CompanyContext.Company.
+            </summary>
+            <returns>The mapping view.</returns>
+        </member>
+        <member name="M:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySetsb46ce1e3d88f638da30bc3981132c5920bf0cc5e01d1919cf2e2df8e1b74243a.GetView3">
+            <summary>
+            Gets the view for CompanyContext.CompanyProduct.
+            </summary>
+            <returns>The mapping view.</returns>
+        </member>
+        <member name="P:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySetsb46ce1e3d88f638da30bc3981132c5920bf0cc5e01d1919cf2e2df8e1b74243a.MappingHashValue">
+            <summary>
+            Gets a hash value computed over the mapping closure.
+            </summary>
+        </member>
+        <member name="T:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets55546146c74e030819578393cb04d52a8b658be4e16dc0a125a9cf7b47bb35dc">
+            <summary>
+            Implements a mapping view cache.
+            </summary>
+        </member>
+        <member name="M:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets55546146c74e030819578393cb04d52a8b658be4e16dc0a125a9cf7b47bb35dc.GetView(System.Data.Entity.Core.Metadata.Edm.EntitySetBase)">
+            <summary>
+            Gets a view corresponding to the specified extent.
+            </summary>
+            <param name="extent">The extent.</param>
+            <returns>The mapping view, or null if the extent is not associated with a mapping view.</returns>
+        </member>
+        <member name="M:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets55546146c74e030819578393cb04d52a8b658be4e16dc0a125a9cf7b47bb35dc.GetView0">
+            <summary>
+            Gets the view for CodeFirstDatabase.News.
+            </summary>
+            <returns>The mapping view.</returns>
+        </member>
+        <member name="M:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets55546146c74e030819578393cb04d52a8b658be4e16dc0a125a9cf7b47bb35dc.GetView1">
+            <summary>
+            Gets the view for NewsContext.News.
+            </summary>
+            <returns>The mapping view.</returns>
+        </member>
+        <member name="P:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets55546146c74e030819578393cb04d52a8b658be4e16dc0a125a9cf7b47bb35dc.MappingHashValue">
+            <summary>
+            Gets a hash value computed over the mapping closure.
+            </summary>
         </member>
         <member name="F:TPIA.FrondEnd.NewsActivity.GridView1">
             <summary>

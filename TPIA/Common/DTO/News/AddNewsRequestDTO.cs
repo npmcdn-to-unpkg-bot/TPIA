@@ -1,11 +1,24 @@
 ﻿
+using System;
+using TPIA.Common.Enumeration;
 namespace TPIA.Common.DTO.News
 {
-  public class AddNewsRequestDTO
-  {
-    public string dtoNewsClass { get; set; }
-    public string dtoNewsTitle { get; set; }
-    public string dtoNewsContent { get; set; }
-    public string dtoDwgUrl { get; set; }
-  }
+    /// <summary>
+    /// 新增最新消息
+    /// </summary>
+    public class AddNewsRequestDTO
+    {
+        /// <summary>
+        /// 消息類別
+        /// </summary>
+        public enNewsCategory Category { get; set; }
+        /// <summary>
+        /// 消息標題
+        /// </summary>
+        public string Title { get; set; }
+        /// <summary>
+        /// 消息內文
+        /// </summary>
+        public string NewsContent { get; set; }
+    }
 }
