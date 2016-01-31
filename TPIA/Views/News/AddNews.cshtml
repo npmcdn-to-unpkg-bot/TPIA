@@ -7,7 +7,8 @@
 
 <h2>AddNews</h2>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
@@ -22,12 +23,12 @@
             @Html.ValidationMessageFor(model => model.Title)
         </div>
         <select name="Category">
-            <option value="@enNewsCategory.Activity.ToString()"></option>
-            <option value="@enNewsCategory.Class.ToString()"></option>
-            <option value="@enNewsCategory.Guild.ToString()"></option>
-            <option value="@enNewsCategory.Industry.ToString()"></option>
-            <option value="@enNewsCategory.Project.ToString()"></option>
-            <option value="@enNewsCategory.Show.ToString()"></option>
+            <option value="@enNewsCategory.Activity.ToString()">@enNewsCategory.Activity.ToString()</option>
+            <option value="@enNewsCategory.Class.ToString()">@enNewsCategory.Class.ToString()</option>
+            <option value="@enNewsCategory.Guild.ToString()">@enNewsCategory.Guild.ToString()</option>
+            <option value="@enNewsCategory.Industry.ToString()">@enNewsCategory.Industry.ToString()</option>
+            <option value="@enNewsCategory.Project.ToString()">@enNewsCategory.Project.ToString()</option>
+            <option value="@enNewsCategory.Show.ToString()">@enNewsCategory.Show.ToString()</option>
         </select>
 
         <div class="editor-label">
