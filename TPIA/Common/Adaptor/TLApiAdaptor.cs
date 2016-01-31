@@ -26,8 +26,7 @@ namespace TPIA.Common.Adaptor
 
                 _httpClient = new HttpClient();
 
-                _TLUrl = "http://localhost:1541/";
-                //_TLUrl = ConfigurationManager.AppSettings["WebAPIUrl_TL"];
+                _TLUrl = ConfigurationManager.AppSettings["WebAPIUrl_TL"];
 
                 _httpClient.BaseAddress = new Uri(_TLUrl);
                 _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

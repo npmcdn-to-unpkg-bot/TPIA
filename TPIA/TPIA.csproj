@@ -86,6 +86,7 @@
     </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
       <Private>True</Private>
@@ -97,9 +98,12 @@
     </Reference>
     <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -354,8 +358,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="CSS\content_box.css" />
-    <Content Include="CSS\masonry-docs.css" />
     <Content Include="favicon.ico" />
     <Content Include="FrondEnd\NewsActivity.aspx" />
     <Content Include="FrondEnd\NewsProject.aspx" />
@@ -378,50 +380,8 @@
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="FrondEnd\Main.Master" />
+    <None Include="Properties\PublishProfiles\Site.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Images\TPIA\about1-1.jpg" />
-    <Content Include="Images\TPIA\about1-2.jpg" />
-    <Content Include="Images\TPIA\about1-3.jpg" />
-    <Content Include="Images\TPIA\about1-4.jpg" />
-    <Content Include="Images\TPIA\about1-5.jpg" />
-    <Content Include="Images\TPIA\about1-6.jpg" />
-    <Content Include="Images\TPIA\about2-1.jpg" />
-    <Content Include="Images\TPIA\about2-2.jpg" />
-    <Content Include="Images\TPIA\about2-3.jpg" />
-    <Content Include="Images\TPIA\about2-4.jpg" />
-    <Content Include="Images\TPIA\bank.jpg" />
-    <Content Include="Images\TPIA\bank2.jpg" />
-    <Content Include="Images\TPIA\banner.gif" />
-    <Content Include="Images\TPIA\car.jpg" />
-    <Content Include="Images\TPIA\car2.jpg" />
-    <Content Include="Images\TPIA\car3.jpg" />
-    <Content Include="Images\TPIA\cin1.jpg" />
-    <Content Include="Images\TPIA\cin2.jpg" />
-    <Content Include="Images\TPIA\cin3.jpg" />
-    <Content Include="Images\TPIA\cin4.jpg" />
-    <Content Include="Images\TPIA\house1.jpg" />
-    <Content Include="Images\TPIA\house2.jpg" />
-    <Content Include="Images\TPIA\house3.jpg" />
-    <Content Include="Images\TPIA\house4.jpg" />
-    <Content Include="Images\TPIA\Hydrangeas.jpg" />
-    <Content Include="Images\TPIA\iphone.jpg" />
-    <Content Include="Images\TPIA\line1.jpg" />
-    <Content Include="Images\TPIA\line2.jpg" />
-    <Content Include="Images\TPIA\line3.jpg" />
-    <Content Include="Images\TPIA\link1-1.jpg" />
-    <Content Include="Images\TPIA\member1-1.jpg" />
-    <Content Include="Images\TPIA\member2-1.jpg" />
-    <Content Include="Images\TPIA\member2-2.jpg" />
-    <Content Include="Images\TPIA\member2-3.jpg" />
-    <Content Include="Images\TPIA\member2-4.jpg" />
-    <Content Include="Images\TPIA\news1-1.jpg" />
-    <Content Include="Images\TPIA\news1-2.jpg" />
-    <Content Include="Images\TPIA\news1-3.jpg" />
-    <Content Include="Images\TPIA\news1-4.jpg" />
-    <Content Include="Images\TPIA\news1-5.jpg" />
-    <Content Include="Images\TPIA\news1-6.jpg" />
-    <Content Include="Images\TPIA\news1-7.jpg" />
-    <Content Include="Images\TPIA\photo.jpg" />
     <Content Include="Scripts\Home\function.js" />
     <Content Include="Scripts\Home\jquery.masonry.min.js" />
     <Content Include="Scripts\Home\masonry-doc.min.js" />
@@ -454,19 +414,6 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bullet.png" />
-    <Content Include="Images\heroAccent.png" />
-    <Content Include="Images\orderedList0.png" />
-    <Content Include="Images\orderedList1.png" />
-    <Content Include="Images\orderedList2.png" />
-    <Content Include="Images\orderedList3.png" />
-    <Content Include="Images\orderedList4.png" />
-    <Content Include="Images\orderedList5.png" />
-    <Content Include="Images\orderedList6.png" />
-    <Content Include="Images\orderedList7.png" />
-    <Content Include="Images\orderedList8.png" />
-    <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -486,7 +433,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="CSS\" />
     <Folder Include="Images\News\" />
+    <Folder Include="Images\TPIA\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
