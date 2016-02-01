@@ -34,7 +34,8 @@
                                                     @Html.DisplayFor(modelItem => item.NewsCategory)
                                                 </td>*@
                                             <td>                                               
-                                                @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
+                                                @Html.ActionLink(item.NewsTitle, "EditNews", "News", new { NewsId = item.NewsID }, null)
+                                                @*@Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)*@
                                             </td>
                                             <td>
                                                 @*@Html.DisplayFor(modelItem => item.CreateDate)*@
@@ -54,70 +55,7 @@
                             </div>*@
                     </div>
                 </div>
-            </div>
-            @*<div class="col-sm-4 col-md-4">
-                    <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-box">
-                            <div class="service-icon">
-                                我的最愛
-                            </div>
-                            <div class="service-desc">
-                                <h5>Web Design</h5>
-                                <p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>*@
+            </div>           
         </div>
     </div>
 </section>
-
-@*<div id="_container" style="width:800px; overflow:hidden; margin:0 auto;">
-    <h2>最新消息</h2>
-
-    <p>
-        @Html.ActionLink("建立新消息", "AddNews", "News")
-    </p>
-    <table>
-        <tr>
-            <th>
-                消息編號
-            </th>
-            <th>
-                    @Html.DisplayNameFor(model => model.NewsCategory)
-                </th>
-            <th style="text-align:center">
-                標題
-            </th>
-            <th>
-                建立時間
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (TPIA.Common.DTO.News.GetNewsListReturnDTO item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NewsID)
-                </td>
-                <td>
-                        <label>@item.NewsCategory</label>
-                        @Html.DisplayFor(modelItem => item.NewsCategory)
-                    </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NewsTitle)
-                    @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreateDate)
-                </td>
-                <td>
-                    @Html.ActionLink("編輯消息", "EditNews", "News", new { NewsId = item.NewsID }, null) |
-                    @Html.ActionLink("刪除消息", "DeleteNews", "News", new { NewsId = item.NewsID }, null)
-                </td>
-            </tr>
-        }
-
-    </table>
-</div>*@

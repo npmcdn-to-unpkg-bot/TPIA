@@ -46,7 +46,7 @@ namespace TPIA.Controllers
             string url = "api/News/GetNewsTitleList";
             List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
             return View(resultDto);
-        }
+        }        
 
         public ActionResult AddNews()
         {
@@ -54,6 +54,7 @@ namespace TPIA.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult AddNews(AddNewsRequestDTO dto)
         {
             string url = "api/News/AddNews";
@@ -78,6 +79,7 @@ namespace TPIA.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult EditNews(EditNewsRequestDTO dto)
         {
             string url = "api/News/EditNews";

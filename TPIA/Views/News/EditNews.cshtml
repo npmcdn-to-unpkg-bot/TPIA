@@ -4,83 +4,86 @@
     ViewBag.Title = "編輯消息";
     Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
 }
-<div id="_container" style="width:800px; overflow:hidden; margin:0 auto;">   
+<script type="text/javascript" src="~/Scripts/ckeditor/ckeditor.js"></script>
 
-    @using (Html.BeginForm("EditNews", "News", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
-        @Html.ValidationSummary(true)
+@using (Html.BeginForm("EditNews", "News", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
 
-        <fieldset>
-            <legend>編輯 最新消息 內容</legend>
+    <fieldset>
+        <legend>編輯 最新消息 內容</legend>
 
-            <div class="editor-label">
-                消息編號
-            </div>
-            <div class="editor-field">
-                @*@Html.DisplayFor(model => model.NewsID)
+        <div class="editor-label">
+            消息編號
+        </div>
+        <div class="editor-field">
+            @*@Html.DisplayFor(model => model.NewsID)
                 @Html.ValidationMessageFor(model => model.NewsID)*@
-                <span >@Model.NewsID</span>
-                <input name="NewsID" type="text" value="@Model.NewsID" style="display:none;" />
-            </div>
-            <div class="editor-label">
-                類別
-            </div>
-            <div class="editor-field">
-                <select name="Category">
-                    @foreach (string item in System.Enum.GetNames(typeof(enNewsCategory)))
+            <span>@Model.NewsID</span>
+            <input name="NewsID" type="text" value="@Model.NewsID" style="display:none;" />
+        </div>
+        <div class="editor-label">
+            類別
+        </div>
+        <div class="editor-field">
+            <select name="Category">
+                @foreach (string item in System.Enum.GetNames(typeof(enNewsCategory)))
+                {
+                    string Name = string.Empty;
+                    switch (item)
                     {
-                        string Name = string.Empty;
-                        switch (item)
-                        {
-                            case "Activity":
-                                Name = "產業快訊";
-                                break;
-                            case "Class":
-                                Name = "研習課程";
-                                break;
-                            case "Guild":
-                                Name = "公會消息";
-                                break;
-                            case "Industry":
-                                Name = "活動快訊";
-                                break;
-                            case "Project":
-                                Name = "專業發表";
-                                break;
-                            case "Show":
-                                Name = "展覽通知";
-                                break;
-                            default:
-                                break;
-                        }
-                        <option value="@item.ToString()" selected="@(item.ToString()==Model.Category.ToString())">@Name</option>
+                        case "Activity":
+                            Name = "產業快訊";
+                            break;
+                        case "Class":
+                            Name = "研習課程";
+                            break;
+                        case "Guild":
+                            Name = "公會消息";
+                            break;
+                        case "Industry":
+                            Name = "活動快訊";
+                            break;
+                        case "Project":
+                            Name = "專業發表";
+                            break;
+                        case "Show":
+                            Name = "展覽通知";
+                            break;
+                        default:
+                            break;
                     }
-                </select>
-            </div>
-            <div class="editor-label">
-                消息名稱
-            </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.Title)
-                @Html.ValidationMessageFor(model => model.Title)
-            </div>
+                    <option value="@item.ToString()" selected="@(item.ToString()==Model.Category.ToString())">@Name</option>
+                }
+            </select>
+        </div>
+        <div class="editor-label">
+            消息名稱
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Title)
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
 
-            <div class="editor-label">
-                消息內容
-            </div>
-            <div class="editor-field">
-                @Html.EditorFor(model => model.NewsContent)
-                @Html.ValidationMessageFor(model => model.NewsContent)
-            </div>
+        <div class="editor-label">
+            消息內容
+        </div>
+        <div class="editor-field">            
+            @Html.TextArea("NewsContent", new { @class = "ckeditor" })
+        </div>
 
-            <p>
-                <input type="submit" value="Save" />
-            </p>
-        </fieldset>
-    }
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
 
-    <div>
-        @Html.ActionLink("回到 最新消息 列表", "BackEndIndex", "News")
-    </div>
+<div>
+    @Html.ActionLink("回到 最新消息 列表", "BackEndIndex", "News")
 </div>
+<script type="text/javascript">
+    CKEDITOR.replace('NewsContent'
+    , { filebrowserImageUploadUrl: '/FileUpload/UploadPicture' }
+    );
+</script>
