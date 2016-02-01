@@ -50,48 +50,12 @@ namespace TPIA.Common.Adaptor
             result = msg.Content.ReadAsAsync<To>().Result;
 
             return result;
-        }
-
-        public To GetByValidate<To>(string uri, string ClubOneToken, string UID)
-        {
-            To result;
-            HttpResponseMessage msg = null;
-
-            Client.DefaultRequestHeaders.Clear();
-            Client.DefaultRequestHeaders.Add("ClubOneToken", ClubOneToken);
-            Client.DefaultRequestHeaders.Add("UID", UID);
-
-            msg = Client.GetAsync(uri).Result;
-            if (!msg.IsSuccessStatusCode)
-                throw new Exception(msg.Content.ReadAsStringAsync().Result);
-
-            result = msg.Content.ReadAsAsync<To>().Result;
-
-            return result;
-        }
+        }        
 
         public To Post<Ti,To>(string uri, Ti obj)
         {
             To result = default(To);
             HttpResponseMessage msg = null;
-
-            msg = Client.PostAsJsonAsync<Ti>(uri, obj).Result;
-            if (!msg.IsSuccessStatusCode)
-                throw new Exception(msg.Content.ReadAsStringAsync().Result);
-
-            result = msg.Content.ReadAsAsync<To>().Result;
-
-            return result;
-        }
-
-        public To PostByValidate<Ti, To>(string uri, Ti obj, string ClubOneToken, string UID)
-        {
-            To result = default(To);
-            HttpResponseMessage msg = null;
-
-            Client.DefaultRequestHeaders.Clear();
-            Client.DefaultRequestHeaders.Add("ClubOneToken", ClubOneToken);
-            Client.DefaultRequestHeaders.Add("UID", UID);
 
             msg = Client.PostAsJsonAsync<Ti>(uri, obj).Result;
             if (!msg.IsSuccessStatusCode)
@@ -116,44 +80,10 @@ namespace TPIA.Common.Adaptor
             return result;
         }
 
-        public To PutByValidate<Ti, To>(string uri, Ti obj, string ClubOneToken, string UID)
-        {
-            To result = default(To);
-            HttpResponseMessage msg = null;
-
-            Client.DefaultRequestHeaders.Clear();
-            Client.DefaultRequestHeaders.Add("ClubOneToken", ClubOneToken);
-            Client.DefaultRequestHeaders.Add("UID", UID);
-
-            msg = Client.PutAsJsonAsync<Ti>(uri, obj).Result;
-            if (!msg.IsSuccessStatusCode)
-                throw new Exception(msg.Content.ReadAsStringAsync().Result);
-
-            result = msg.Content.ReadAsAsync<To>().Result;
-
-            return result;
-        }
-
         public To Delete<To>(string uri)
         {
             To result = default(To);
             HttpResponseMessage msg = null;
-
-            msg = Client.DeleteAsync(uri).Result;
-            if (!msg.IsSuccessStatusCode)
-                throw new Exception(msg.Content.ReadAsStringAsync().Result);
-
-            return result;
-        }
-
-        public To DeleteByValidate<To>(string uri, string ClubOneToken, string UID)
-        {
-            To result = default(To);
-            HttpResponseMessage msg = null;
-
-            Client.DefaultRequestHeaders.Clear();
-            Client.DefaultRequestHeaders.Add("ClubOneToken", ClubOneToken);
-            Client.DefaultRequestHeaders.Add("UID", UID);
 
             msg = Client.DeleteAsync(uri).Result;
             if (!msg.IsSuccessStatusCode)

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO>
+@{
+    ViewBag.Title = "BackEndIndex";
+    Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
+}
+<p></p>
+<br />
+<section id="service" class=" text-center ">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="wow fadeInLeft panel panel-info" data-wow-delay="0.2s">
+                    <div class="panel-heading">友好連結 <div style="text-align:right;color:blue;">@Html.ActionLink("建立友好連結", "AddShareLink", "ShareLink")</div></div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>連結標題</th>
+                                        <th>連結描述</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="myTable">
+                                    @foreach (TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <a href="@item.LinkUrl">@item.Title</a>
+                                                @*@Html.DisplayFor(modelItem => item.Title)*@
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Description)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("編輯消息", "EditShareLink", "ShareLink", new { LId = item.LID }, null) 
+                                                @*@Html.ActionLink("刪除消息", "DeleteNews", "News", new { NewsId = item.NewsID }, null)*@
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

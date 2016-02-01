@@ -19,10 +19,17 @@ namespace TPIA.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
+        {            
+            return View();
+        }
+
+        /// <summary>
+        /// 後臺首頁
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult BackEndIndex()
         {
-            string url = "api/News/GetNewsTitleList";
-            List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
-            return View(resultDto);
+            return View();
         }
     }
 }

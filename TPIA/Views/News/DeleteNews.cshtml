@@ -1,0 +1,41 @@
+﻿@model TPIA.Common.DTO.News.GetNewsContentReturnDTO
+
+@{
+    ViewBag.Title = "刪除消息";
+    Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
+}
+<div id="_container" style="width:800px; overflow:hidden; margin:0 auto;">
+    <fieldset>
+        <legend>確認要刪除此筆消息內容嗎?</legend>
+
+        <div class="display-label">
+            標題
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.NewsTitle)
+        </div>
+
+        <div class="display-label">
+            內容
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.NewsContent)
+        </div>
+
+        <div class="display-label">
+            建立日期
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.CreateDate)
+        </div>
+    </fieldset>
+    @using (Html.BeginForm("DeleteNews", "News", new { NewsId = Model.NewsID }, FormMethod.Post, null))
+    {
+        @Html.AntiForgeryToken()
+        <p>
+            <input name="NewsId" type="hidden" value="@Model.NewsID" />
+            <input type="submit" value="Delete" /> |
+            @Html.ActionLink("回到 最新消息", "BackEndIndex", "News")
+        </p>
+    }
+</div>

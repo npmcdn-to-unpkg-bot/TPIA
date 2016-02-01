@@ -1,54 +1,77 @@
 ﻿@model TPIA.Common.DTO.News.AddNewsRequestDTO
 @using TPIA.Common.Enumeration
 @{
-    ViewBag.Title = "AddNews";
-    Layout = null;
+    ViewBag.Title = "新增消息";
+    Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
 }
+<div id="_container" style="width:800px; overflow:hidden; margin:0 auto;">
+    <h2>新增消息</h2>
 
-<h2>AddNews</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+        <fieldset>
+            <legend>新增 最新消息 內容</legend>
 
-    <fieldset>
-        <legend>AddNewsRequestDTO</legend>
+            <div class="editor-label">
+                消息標題
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Title)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Title)
-            @Html.ValidationMessageFor(model => model.Title)
-        </div>
-        <select name="Category">
-            <option value="@enNewsCategory.Activity.ToString()">@enNewsCategory.Activity.ToString()</option>
-            <option value="@enNewsCategory.Class.ToString()">@enNewsCategory.Class.ToString()</option>
-            <option value="@enNewsCategory.Guild.ToString()">@enNewsCategory.Guild.ToString()</option>
-            <option value="@enNewsCategory.Industry.ToString()">@enNewsCategory.Industry.ToString()</option>
-            <option value="@enNewsCategory.Project.ToString()">@enNewsCategory.Project.ToString()</option>
-            <option value="@enNewsCategory.Show.ToString()">@enNewsCategory.Show.ToString()</option>
-        </select>
+            <div class="editor-label">
+                消息分類
+            </div>
+            <select name="Category">
+                @foreach (string item in System.Enum.GetNames(typeof(enNewsCategory)))
+                {
+                    string Name = string.Empty;
+                    switch (item)
+                    {
+                        case "Activity":
+                            Name = "產業快訊";
+                            break;
+                        case "Class":
+                            Name = "研習課程";
+                            break;
+                        case "Guild":
+                            Name = "公會消息";
+                            break;
+                        case "Industry":
+                            Name = "活動快訊";
+                            break;
+                        case "Project":
+                            Name = "專業發表";
+                            break;
+                        case "Show":
+                            Name = "展覽通知";
+                            break;
+                        default:
+                            break;
+                    }
+                    <option value="@item.ToString()">@Name</option>
+                }
+            </select>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.NewsContent)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.NewsContent)
-            @Html.ValidationMessageFor(model => model.NewsContent)
-        </div>
+            <div class="editor-label">
+                消息內文
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.NewsContent)
+                @Html.ValidationMessageFor(model => model.NewsContent)
+            </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
-}
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </fieldset>
+    }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+    <div>
+        @Html.ActionLink("回到 最新消息 列表", "BackEndIndex", "News")
+    </div>
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

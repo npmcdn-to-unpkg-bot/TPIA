@@ -1,0 +1,106 @@
+﻿@model TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO
+
+@{
+    ViewBag.Title = "AddCompayInfo";
+    Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
+}
+
+<p></p>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>新增 企業會員</legend>
+
+        <div class="editor-label">
+            公司名稱
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompanyName)
+            @Html.ValidationMessageFor(model => model.CompanyName)
+        </div>
+
+        <div class="editor-label">
+            公司負責人
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Manager)
+            @Html.ValidationMessageFor(model => model.Manager)
+        </div>
+
+        <div class="editor-label">
+            業務聯絡人
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Sales)
+            @Html.ValidationMessageFor(model => model.Sales)
+        </div>
+
+        <div class="editor-label">
+            公司簡介
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AboutUs)
+            @Html.ValidationMessageFor(model => model.AboutUs)
+        </div>
+
+        <div class="editor-label">
+            公司地址
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+
+        <div class="editor-label">
+            公司電話
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Phone)
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+
+        <div class="editor-label">
+            公司傳真
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tax)
+            @Html.ValidationMessageFor(model => model.Tax)
+        </div>
+
+        <div class="editor-label">
+            電子信箱
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EMail)
+            @Html.ValidationMessageFor(model => model.EMail)
+        </div>
+
+        <div class="editor-label">
+            主要產品
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MainProducts)
+            @Html.ValidationMessageFor(model => model.MainProducts)
+        </div>
+
+        <div class="editor-label">
+            公司網址
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SiteURL)
+            @Html.ValidationMessageFor(model => model.SiteURL)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("回到列表", "BackEndIndex","Company")
+</div>

@@ -1,47 +1,35 @@
-﻿@model List<TPIA.Common.DTO.News.GetNewsListReturnDTO>
-@{
+﻿@{
     ViewBag.Title = "首頁";
 }
-<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(function () {
-        $('#_container').imagesLoaded(function () {
-            $('#_container').masonry({
-                itemSelector: '.content_box',
-                columnWidth: 364,
-                singleMode: false,
-                animate: true
+@*<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#_container').imagesLoaded(function () {
+                $('#_container').masonry({
+                    itemSelector: '.content_box',
+                    columnWidth: 364,
+                    singleMode: false,
+                    animate: true
+                });
             });
         });
-    });
-</script>
+    </script>*@
 
 <div id="_container" style="width:800px; overflow:hidden; margin:0 auto;">
-    @if (Model != null)
-    {
-        foreach (var item in Model)
+    @*@if (Model != null)
         {
-            @*<div class="content_box">
-                    <img style="width:165px" src="~/Images/TPIA/@item.DwgUrl" />
-                    <p><a href="@Url.Action("NewsContent", "News", new { NewsID = @item.NewSID })">@item.NewSTitle</a></p>
+            foreach (var item in Model)
+            {
+
+                <div class="content_box">
+                    <p><a href="@Url.Action("NewsContent", "News", new { NewsID = @item.NewsID })">@item.NewsTitle</a></p>
                     <p>@item.CreateDate.ToString("yyyy/MM/dd")</p>
                     <br />
-                    <div class="pubu" style="display:none">
-                        <input type="button" value="新增" onclick="location.href ='@Url.Action("ActAddNew", "AddNews", new { newsid = @item.NewSID })'" />
-                        <input type="button" value="修改" onclick="location.href ='@Url.Action("acteditnew", "EditNews" , new { newsid=@item.NewSID })'" />
-                        <input type="button" value="刪除" onclick="location.href ='@Url.Action("ActDelNew", "DelNews", new { newsid = @item.NewSID })'" />
-                    </div>
-                </div>*@
-            <div class="content_box">
-                @*<img style="width:165px" src="~/Images/TPIA/@item.DwgUrl" />*@
-                <p><a href="@Url.Action("NewsContent", "News", new { NewsID = @item.NewsID })">@item.NewsTitle</a></p>
-                <p>@item.CreateDate.ToString("yyyy/MM/dd")</p>
-                <br />
-            </div>
+                </div>
 
-        }
-    }
+            }
+        }*@
+
+    @Html.ActionLink("後臺管理","BackEndIndex","News")
 </div>
 
-
-@*<button onclick="show()">會員功能</button>*@

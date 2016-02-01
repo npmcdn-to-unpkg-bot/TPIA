@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <!--相容IE設定
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣區印刷暨機器材料工業同業公會管理後臺</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <meta name="description" content="台灣區印刷暨機器材料工業同業公會Welcome to Taiwan Printing Industry Association" />
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll" @*style="background-image: url(../Images/CEI_bg01.png) ;"*@>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                    <h1><span class="glyphicon glyphicon-home" />TPIA</h1>
+                </a>
+                <div class="navbar-brand">
+                    @*<h2>Hello, User !</h2>*@
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav ">
+                    <li><a href="#main">主頁</a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("BackEndIndex", "News")">最新消息管理</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("BackEndIndex", "Company")">企業會員名錄管理</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("BackEndIndex", "ShareLink")">友好連結管理</a>
+                    </li>
+                    @*<li class="dropdown" role="menu">
+                        <a class="dropdown-toggle" id="System" role="button" aria-expanded="true" aria-haspopup="true" href="#" data-toggle="dropdown">
+                            系統
+                            <span class="caret"></span>
+                        </a>                        
+                    </li>*@                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+
+    <footer>
+        <p>
+            本會現址：台北市仁愛路二段71號6樓A室 <br>
+            電話：（02）2341-8034~5 傳真： 2391-9294 <br>
+            E-mail：<a href="mailto:tpia0271@ms37.hinet.net">tpia0271@ms37.hinet.net</a>&nbsp; 網址：<a href="http://www.tpia.org.tw">www.tpia.org.tw</a>
+        </p>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/bootstrap-submenu")
+    <script type="text/javascript" src="~/Scripts/wow.min.js"></script>
+    @Scripts.Render("~/bundles/custom")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

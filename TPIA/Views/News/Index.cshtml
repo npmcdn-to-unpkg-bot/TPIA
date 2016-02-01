@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TPIA.Common.DTO.News.GetNewsListReturnDTO>
+
+@{
+    ViewBag.Title = "最新消息";
+}
+<div id="_container" style="width:800px; overflow:hidden; margin:0 auto;">
+    <h2>最新消息</h2>
+
+    <table>
+        <tr>            
+            <th>
+                @Html.DisplayNameFor(model => model.NewsCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewsTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateDate)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (TPIA.Common.DTO.News.GetNewsListReturnDTO item in Model)
+        {
+            <tr>                
+                <td>
+                    @Html.DisplayFor(modelItem => item.NewsCategory)
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.NewsTitle)*@
+                    @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateDate)
+                </td>                
+            </tr>
+        }
+
+    </table>
+</div>

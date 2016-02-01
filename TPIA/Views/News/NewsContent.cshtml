@@ -1,0 +1,16 @@
+﻿@model TPIA.Common.DTO.News.GetNewsContentReturnDTO
+
+@{
+    ViewBag.Title = "GetNewsContent";
+}
+
+<div id="_container" style="width:800px; overflow:hidden; margin:0 auto;">
+    <h2>@Model.NewsTitle</h2>
+    <p>
+        @Html.Raw(Model.NewsContent)
+    </p>
+    @Model.CreateDate
+    <p>        
+        @Html.ActionLink("回到 最新消息列表", "Index", "News")
+    </p>
+</div>

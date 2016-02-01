@@ -2,6 +2,7 @@ namespace TPIA.Entity.News.Entities
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    using TPIA.Common.Enumeration;
 
     public partial class News
     {

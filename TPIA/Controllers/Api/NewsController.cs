@@ -25,11 +25,9 @@ namespace TPIA.Controllers.Api
         {
             List<GetNewsListReturnDTO> lsreturnDto = new List<GetNewsListReturnDTO>();
 
-            //NewsEntities newsEn = new NewsEntities();
-            //returnDto = newsEn.GetNewsList();
             try
             {
-                IEnumerable<News> dbSet = _dbContext.Set<News>().Where(o => o.IsEnable == true);
+                IEnumerable<News> dbSet = _dbContext.Set<News>().Where(o => o.IsEnable == true).OrderByDescending(o => o.CreateTime);
 
                 foreach (News item in dbSet)
                 {
@@ -60,12 +58,14 @@ namespace TPIA.Controllers.Api
         /// <returns></returns>
         public GetNewsContentReturnDTO GetNewsContent(int NewsID)
         {
-            GetNewsContentReturnDTO returnDto = new GetNewsContentReturnDTO();
+            GetNewsContentReturnDTO returnDto = null;
 
             News dbSet = _dbContext.Set<News>().FirstOrDefault(o => o.IsEnable == true && o.ID.Equals(NewsID));
 
-            GetNewsContentReturnDTO newDto = new GetNewsContentReturnDTO()
+            returnDto = new GetNewsContentReturnDTO()
             {
+                NewsID = dbSet.ID,
+                NewsCategory = (enNewsCategory)Enum.Parse(typeof(enNewsCategory), dbSet.Category),
                 NewsTitle = dbSet.Title,
                 NewsContent = dbSet.NewsContent,
                 CreateDate = dbSet.CreateTime
@@ -91,7 +91,7 @@ namespace TPIA.Controllers.Api
                     Category = dto.Category.ToString(),
                     NewsContent = dto.NewsContent.Trim(),
                     IsEnable = true,
-                    CreateTime=DateTime.Now
+                    CreateTime = DateTime.Now
                 };
 
                 var dbSet = _dbContext.Set<News>().Add(n);
@@ -140,12 +140,12 @@ namespace TPIA.Controllers.Api
 
         #region [ 刪除消息 ]
         [HttpPost]
-        public enErrorCode DeleteNews(int NewsID)
+        public enErrorCode DeleteNews(DeleteNewsRequestDTO dto)
         {
             enErrorCode enCode = enErrorCode.EXCEPTION;
             try
             {
-                News n = _dbContext.Set<News>().Find(NewsID);
+                News n = _dbContext.Set<News>().FirstOrDefault(o => o.ID == dto.NewsID);
                 n.IsEnable = false;
                 int result = _dbContext.SaveChanges();
 

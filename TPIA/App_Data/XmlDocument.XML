@@ -414,6 +414,256 @@
             將移動欄位宣告從設計檔案修改為程式碼後置檔案。
             </remarks>
         </member>
+        <member name="T:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO">
+            <summary>
+            企業會員資訊
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO.CompanyName">
+            <summary>
+            公司名稱
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO.Manager">
+            <summary>
+            公司負責人
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO.Sales">
+            <summary>
+            業務聯絡人
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO.AboutUs">
+            <summary>
+            公司簡介
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO.Address">
+            <summary>
+            公司地址
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO.Phone">
+            <summary>
+            公司電話
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO.Tax">
+            <summary>
+            公司傳真
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO.EMail">
+            <summary>
+            電子信箱
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO.MainProducts">
+            <summary>
+            主要產品
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO.SiteURL">
+            <summary>
+            公司網址
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.EditCompanyInfoRequestDTO.CID">
+            <summary>
+            公司代碼
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.EditCompanyInfoRequestDTO.CompanyName">
+            <summary>
+            公司名稱
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.EditCompanyInfoRequestDTO.Manager">
+            <summary>
+            公司負責人
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.EditCompanyInfoRequestDTO.Sales">
+            <summary>
+            業務聯絡人
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.EditCompanyInfoRequestDTO.AboutUs">
+            <summary>
+            公司簡介
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.EditCompanyInfoRequestDTO.Address">
+            <summary>
+            公司地址
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.EditCompanyInfoRequestDTO.Phone">
+            <summary>
+            公司電話
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.EditCompanyInfoRequestDTO.Tax">
+            <summary>
+            公司傳真
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.EditCompanyInfoRequestDTO.EMail">
+            <summary>
+            電子信箱
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.EditCompanyInfoRequestDTO.MainProducts">
+            <summary>
+            主要產品
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.EditCompanyInfoRequestDTO.SiteURL">
+            <summary>
+            公司網址
+            </summary>
+        </member>
+        <member name="T:TPIA.Common.DTO.Company.GetCompanyListReturnDTO">
+            <summary>
+            取得公司清單
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompanyListReturnDTO.CID">
+            <summary>
+            公司代碼
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompanyListReturnDTO.CompanyName">
+            <summary>
+            公司名稱
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayDetailReturnDTO.CompanyName">
+            <summary>
+            公司名稱
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayDetailReturnDTO.Manager">
+            <summary>
+            公司負責人
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayDetailReturnDTO.Sales">
+            <summary>
+            業務聯絡人
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayDetailReturnDTO.AboutUs">
+            <summary>
+            公司簡介
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayDetailReturnDTO.Address">
+            <summary>
+            公司地址
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayDetailReturnDTO.Phone">
+            <summary>
+            公司電話
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayDetailReturnDTO.Tax">
+            <summary>
+            公司傳真
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayDetailReturnDTO.EMail">
+            <summary>
+            電子信箱
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayDetailReturnDTO.MainProducts">
+            <summary>
+            主要產品
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayDetailReturnDTO.SiteURL">
+            <summary>
+            公司網址
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayDetailReturnDTO.Products">
+            <summary>
+            產品列表
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayInfoReturnDTO.CID">
+            <summary>
+            公司代碼
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayInfoReturnDTO.CompanyName">
+            <summary>
+            公司名稱
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayInfoReturnDTO.Manager">
+            <summary>
+            公司負責人
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayInfoReturnDTO.Sales">
+            <summary>
+            業務聯絡人
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayInfoReturnDTO.AboutUs">
+            <summary>
+            公司簡介
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayInfoReturnDTO.Address">
+            <summary>
+            公司地址
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayInfoReturnDTO.Phone">
+            <summary>
+            公司電話
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayInfoReturnDTO.Tax">
+            <summary>
+            公司傳真
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayInfoReturnDTO.EMail">
+            <summary>
+            電子信箱
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayInfoReturnDTO.MainProducts">
+            <summary>
+            主要產品
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayInfoReturnDTO.SiteURL">
+            <summary>
+            公司網址
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayProductDTO.ProductTitle">
+            <summary>
+            產品名稱
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayProductDTO.ProductImgURL">
+            <summary>
+            產品圖片
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.Company.GetCompayProductDTO.ProductDesc">
+            <summary>
+            產品簡述
+            </summary>
+        </member>
         <member name="T:TPIA.Common.DTO.News.AddNewsRequestDTO">
             <summary>
             新增最新消息
@@ -464,6 +714,16 @@
             最新消息內文-回傳
             </summary>
         </member>
+        <member name="P:TPIA.Common.DTO.News.GetNewsContentReturnDTO.NewsID">
+            <summary>
+            消息編號
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.News.GetNewsContentReturnDTO.NewsCategory">
+            <summary>
+            消息分類
+            </summary>
+        </member>
         <member name="P:TPIA.Common.DTO.News.GetNewsContentReturnDTO.NewsTitle">
             <summary>
             消息標題
@@ -504,6 +764,156 @@
             建立時間
             </summary>
         </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.AddShareLinkRequestDTO.Category">
+            <summary>
+            連結類別
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.AddShareLinkRequestDTO.Title">
+            <summary>
+            連結標題
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.AddShareLinkRequestDTO.Description">
+            <summary>
+            連結描述
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.AddShareLinkRequestDTO.ImgUrl">
+            <summary>
+            連結圖片
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.AddShareLinkRequestDTO.LinkUrl">
+            <summary>
+            連結網址
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.EditShareLinkRequestDTO.LID">
+            <summary>
+            連結編號
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.EditShareLinkRequestDTO.Category">
+            <summary>
+            連結類別
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.EditShareLinkRequestDTO.Title">
+            <summary>
+            連結標題
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.EditShareLinkRequestDTO.Description">
+            <summary>
+            連結描述
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.EditShareLinkRequestDTO.ImgUrl">
+            <summary>
+            連結圖片
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.EditShareLinkRequestDTO.LinkUrl">
+            <summary>
+            連結網址
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetLinkDetailReturnDTO.LID">
+            <summary>
+            連結編號
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetLinkDetailReturnDTO.Category">
+            <summary>
+            連結類別
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetLinkDetailReturnDTO.Title">
+            <summary>
+            連結標題
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetLinkDetailReturnDTO.Description">
+            <summary>
+            連結描述
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetLinkDetailReturnDTO.ImgUrl">
+            <summary>
+            連結圖片
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetLinkDetailReturnDTO.LinkUrl">
+            <summary>
+            連結網址
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO.LID">
+            <summary>
+            連結編號
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO.Category">
+            <summary>
+            連結類別
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO.Title">
+            <summary>
+            連結標題
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO.Description">
+            <summary>
+            連結描述
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO.ImgUrl">
+            <summary>
+            連結圖片
+            </summary>
+        </member>
+        <member name="P:TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO.LinkUrl">
+            <summary>
+            連結網址
+            </summary>
+        </member>
+        <member name="T:TPIA.Common.Enumeration.enLinkCategory">
+            <summary>
+            好友連結列表
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enLinkCategory.Education">
+            <summary>
+            學術單位
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enLinkCategory.PrintNews">
+            <summary>
+            印刷新知
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enLinkCategory.PrePrintInfo">
+            <summary>
+            印前資訊
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enLinkCategory.PrintInfo">
+            <summary>
+            印刷資訊
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enLinkCategory.ReviewPrintInfo">
+            <summary>
+            印後資訊
+            </summary>
+        </member>
+        <member name="F:TPIA.Common.Enumeration.enLinkCategory.MaterialInfo">
+            <summary>
+            原料資訊
+            </summary>
+        </member>
         <member name="T:TPIA.Common.Enumeration.enNewsCategory">
             <summary>
             消息類別
@@ -539,6 +949,42 @@
             展覽通知
             </summary>
         </member>
+        <member name="T:TPIA.Controllers.Api.CompanyController">
+            <summary>
+            企業會員名錄
+            </summary>
+        </member>
+        <member name="M:TPIA.Controllers.Api.CompanyController.GetCompanyList">
+            <summary>
+            取得 企業會員名錄清單
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.Api.CompanyController.GetCompayDetail(System.Int32)">
+            <summary>
+            取得 企業會員詳細資料
+            </summary>
+            <param name="CID">公司代碼</param>
+            <returns></returns>
+        </member>
+        <member name="T:TPIA.Controllers.Api.LinkController">
+            <summary>
+            友好連結
+            </summary>
+        </member>
+        <member name="M:TPIA.Controllers.Api.LinkController.GetShareLinkList">
+            <summary>
+            取得 企業會員名錄清單
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.Api.LinkController.GetLinkDetail(System.Int32)">
+            <summary>
+            取得 企業會員詳細資料
+            </summary>
+            <param name="CID">公司代碼</param>
+            <returns></returns>
+        </member>
         <member name="T:TPIA.Controllers.Api.NewsController">
             <summary>
             最新消息 - Api
@@ -557,6 +1003,13 @@
             <param name="NewsID"></param>
             <returns></returns>
         </member>
+        <member name="M:TPIA.Controllers.CompanyController.GetCompayDetail(System.Int32)">
+            <summary>
+            取得 最新消息內文 - Web
+            </summary>
+            <param name="NewsId"></param>
+            <returns></returns>
+        </member>
         <member name="T:TPIA.Controllers.HomeController">
             <summary>
             首頁功能
@@ -568,12 +1021,18 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:TPIA.Controllers.HomeController.BackEndIndex">
+            <summary>
+            後臺首頁
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:TPIA.Controllers.NewsController">
             <summary>
             最新消息 - Web
             </summary>
         </member>
-        <member name="M:TPIA.Controllers.NewsController.GetNewsContent(System.Int32)">
+        <member name="M:TPIA.Controllers.NewsController.NewsContent(System.Int32)">
             <summary>
             取得 最新消息內文 - Web
             </summary>
@@ -646,6 +1105,35 @@
             <returns>The mapping view.</returns>
         </member>
         <member name="P:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets55546146c74e030819578393cb04d52a8b658be4e16dc0a125a9cf7b47bb35dc.MappingHashValue">
+            <summary>
+            Gets a hash value computed over the mapping closure.
+            </summary>
+        </member>
+        <member name="T:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets3c19356321497d2d2a57dc6fa58202003a520659cae07d3c842592c32c0130b9">
+            <summary>
+            Implements a mapping view cache.
+            </summary>
+        </member>
+        <member name="M:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets3c19356321497d2d2a57dc6fa58202003a520659cae07d3c842592c32c0130b9.GetView(System.Data.Entity.Core.Metadata.Edm.EntitySetBase)">
+            <summary>
+            Gets a view corresponding to the specified extent.
+            </summary>
+            <param name="extent">The extent.</param>
+            <returns>The mapping view, or null if the extent is not associated with a mapping view.</returns>
+        </member>
+        <member name="M:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets3c19356321497d2d2a57dc6fa58202003a520659cae07d3c842592c32c0130b9.GetView0">
+            <summary>
+            Gets the view for CodeFirstDatabase.ShareLink.
+            </summary>
+            <returns>The mapping view.</returns>
+        </member>
+        <member name="M:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets3c19356321497d2d2a57dc6fa58202003a520659cae07d3c842592c32c0130b9.GetView1">
+            <summary>
+            Gets the view for ShareLinkContext.ShareLink.
+            </summary>
+            <returns>The mapping view.</returns>
+        </member>
+        <member name="P:Edm_EntityMappingGeneratedViews.ViewsForBaseEntitySets3c19356321497d2d2a57dc6fa58202003a520659cae07d3c842592c32c0130b9.MappingHashValue">
             <summary>
             Gets a hash value computed over the mapping closure.
             </summary>
