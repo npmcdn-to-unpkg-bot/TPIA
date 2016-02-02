@@ -1,0 +1,47 @@
+﻿@model IEnumerable<TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                <h4>機構名稱</h4>
+            </th>
+            <th>
+                <h4>簡介</h4>
+            </th>
+            <th>
+                <h4>圖片</h4>
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                <a href=@Html.DisplayFor(modelItem => item.LinkUrl)>
+                <img src=@Html.DisplayFor(modelItem => item.ImgUrl) alt="Go to" width="200" height="60" border="0">
+                </a>
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

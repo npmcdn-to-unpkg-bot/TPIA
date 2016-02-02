@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace TPIA.Controllers
 {
-    public class MemberController : Controller
+    public class DecreeReproducedController : Controller
     {
         //
-        // GET: /Member/
+        // GET: /DecreeReproduced/
 
         public ActionResult Index()
         {
@@ -17,19 +17,28 @@ namespace TPIA.Controllers
         }
 
         /// <summary>
-        /// 印刷會訊
+        /// 政府公告
         /// </summary>
         /// <returns></returns>
-        public ActionResult PrintNewsletter()
+        public ActionResult GovernmentNotice()
         {
             return View();
         }
 
         /// <summary>
-        /// 出版品訂購
+        /// 常用法令
         /// </summary>
         /// <returns></returns>
-        public ActionResult Order()
+        public ActionResult CommonDecree()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// 統計資料
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult DataStatistics()
         {
             return View();
         }

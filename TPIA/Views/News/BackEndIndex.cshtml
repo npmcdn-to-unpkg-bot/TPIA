@@ -4,8 +4,6 @@
     ViewBag.Title = "最新消息";
     Layout = "~/Views/Shared/_LayoutBackEnd.cshtml";
 }
-<p></p>
-<br />
 <section id="service" class=" text-center ">
     <div class="container">
         <div class="row">
@@ -24,7 +22,8 @@
                                     </tr>
                                 </thead>
                                 <tbody id="myTable">
-                                    @foreach (TPIA.Common.DTO.News.GetNewsListReturnDTO item in Model)        {
+                                    @foreach (TPIA.Common.DTO.News.GetNewsListReturnDTO item in Model)
+                                    {
                                         <tr>
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.NewsID)
@@ -33,7 +32,7 @@
                                                     <label>@item.NewsCategory</label>
                                                     @Html.DisplayFor(modelItem => item.NewsCategory)
                                                 </td>*@
-                                            <td>                                               
+                                            <td style="text-align:left">
                                                 @Html.ActionLink(item.NewsTitle, "EditNews", "News", new { NewsId = item.NewsID }, null)
                                                 @*@Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)*@
                                             </td>
@@ -46,16 +45,13 @@
                                                 @Html.ActionLink("刪除消息", "DeleteNews", "News", new { NewsId = item.NewsID }, null)
                                             </td>
                                         </tr>        }
-                                    
+
                                 </tbody>
                             </table>
                         </div>
-                        @*<div class="col-md-12 text-center">
-                                <ul class="pagination pagination-lg pager" id="myPager"></ul>
-                            </div>*@
                     </div>
                 </div>
-            </div>           
+            </div>
         </div>
     </div>
 </section>

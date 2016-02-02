@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace TPIA.Controllers
 {
-    public class MemberController : Controller
+    public class ContactController : Controller
     {
         //
-        // GET: /Member/
+        // GET: /Contact/
 
         public ActionResult Index()
         {
@@ -17,19 +17,10 @@ namespace TPIA.Controllers
         }
 
         /// <summary>
-        /// 印刷會訊
+        /// 連絡我們
         /// </summary>
         /// <returns></returns>
-        public ActionResult PrintNewsletter()
-        {
-            return View();
-        }
-
-        /// <summary>
-        /// 出版品訂購
-        /// </summary>
-        /// <returns></returns>
-        public ActionResult Order()
+        public ActionResult Contact()
         {
             return View();
         }

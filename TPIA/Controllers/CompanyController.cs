@@ -14,12 +14,12 @@ namespace TPIA.Controllers
 
         #region [ FrondEnd]
 
-        //public ActionResult Index()
-        //{
-        //    string url = "api/Link/GetNewsTitleList";
-        //    List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
-        //    return View(resultDto);
-        //}
+        public ActionResult Index()
+        {
+            string url = "api/Company/GetCompanyList";
+            List<GetCompanyListReturnDTO> resultDto = _apiAdaptor.Get<List<GetCompanyListReturnDTO>>(url);
+            return View(resultDto);
+        }
 
         /// <summary>
         /// 取得 最新消息內文 - Web
@@ -32,6 +32,13 @@ namespace TPIA.Controllers
             string url = String.Format("api/Company/GetCompayDetail?CID={0}", CId);
             GetCompayDetailReturnDTO result = _apiAdaptor.Get<GetCompayDetailReturnDTO>(url);
             return View(result);
+        }
+        [HttpGet]
+        public ActionResult GetCompayDetailShow(int CID)
+        {
+            string url = String.Format("api/Company/GetCompayDetail?CID={0}", CID);
+            GetCompayDetailReturnDTO resultShow = _apiAdaptor.Get<GetCompayDetailReturnDTO>(url);
+            return View(resultShow);
         }
 
         #endregion

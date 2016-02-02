@@ -1010,6 +1010,30 @@
             <param name="NewsId"></param>
             <returns></returns>
         </member>
+        <member name="M:TPIA.Controllers.ContactController.Contact">
+            <summary>
+            連絡我們
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.DecreeReproducedController.GovernmentNotice">
+            <summary>
+            政府公告
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.DecreeReproducedController.CommonDecree">
+            <summary>
+            常用法令
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.DecreeReproducedController.DataStatistics">
+            <summary>
+            統計資料
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:TPIA.Controllers.FileUploadController">
             <summary>
             檔案上傳
@@ -1023,6 +1047,66 @@
             <param name="CKEditorFuncNum"></param>
             <param name="CKEditor"></param>
             <param name="langCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.GuildController.AboutGuild">
+            <summary>
+            關於公會
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.GuildController.GuildHistory">
+            <summary>
+            公會沿革
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.GuildController.GuildBriefInt">
+            <summary>
+            公會簡介
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.GuildController.GuildForm">
+            <summary>
+            公會組織
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.GuildController.GuildBusiness">
+            <summary>
+            會務發展
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.GuildController.GuildFormDraw">
+            <summary>
+            公會組織圖
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.GuildRegulationController.GuildRegulation">
+            <summary>
+            公會規章
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.GuildRegulationController.GuildConstitution">
+            <summary>
+            公會章程
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.GuildRegulationController.MemberEnrollmentNotice">
+            <summary>
+            會員入會須知
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.GuildRegulationController.MemberEnrollmentWithdrawalDetails">
+            <summary>
+            入、退費暨繳費細則
+            </summary>
             <returns></returns>
         </member>
         <member name="T:TPIA.Controllers.HomeController">
@@ -1039,6 +1123,18 @@
         <member name="M:TPIA.Controllers.HomeController.BackEndIndex">
             <summary>
             後臺首頁
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.MemberController.PrintNewsletter">
+            <summary>
+            印刷會訊
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.MemberController.Order">
+            <summary>
+            出版品訂購
             </summary>
             <returns></returns>
         </member>

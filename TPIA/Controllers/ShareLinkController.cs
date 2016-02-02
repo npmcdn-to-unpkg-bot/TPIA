@@ -14,12 +14,12 @@ namespace TPIA.Controllers
 
         #region [ FrondEnd]
 
-        //public ActionResult Index()
-        //{
-        //    string url = "api/Link/GetNewsTitleList";
-        //    List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
-        //    return View(resultDto);
-        //}
+        public ActionResult Index()
+        {
+            string url = "api/Link/GetShareLinkList";
+            List<GetShareLinkListReturnDTO> resultDto = _apiAdaptor.Get<List<GetShareLinkListReturnDTO>>(url);
+            return View(resultDto);
+        }
 
         ///// <summary>
         ///// 取得 最新消息內文 - Web

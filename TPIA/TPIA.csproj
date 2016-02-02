@@ -243,7 +243,11 @@
     <Compile Include="Controllers\Api\LinkController.cs" />
     <Compile Include="Controllers\Api\NewsController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DecreeReproducedController.cs" />
     <Compile Include="Controllers\FileUploadController.cs" />
+    <Compile Include="Controllers\GuildController.cs" />
+    <Compile Include="Controllers\GuildRegulationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
@@ -620,6 +624,19 @@
     <Content Include="Views\Company\AddCompayInfo.cshtml" />
     <Content Include="Views\Company\EditCompanyInfo.cshtml" />
     <Content Include="Views\Company\GetCompayDetail.cshtml" />
+    <Content Include="Views\Company\GetCompayDetailShow.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
+    <Content Include="Views\DecreeReproduced\CommonDecree.cshtml" />
+    <Content Include="Views\DecreeReproduced\DataStatistics.cshtml" />
+    <Content Include="Views\DecreeReproduced\GovernmentNotice.cshtml" />
+    <Content Include="Views\GuildRegulation\GuildConstitution.cshtml" />
+    <Content Include="Views\GuildRegulation\GuildRegulation.cshtml" />
+    <Content Include="Views\GuildRegulation\MemberEnrollmentNotice.cshtml" />
+    <Content Include="Views\GuildRegulation\MemberEnrollmentWithdrawalDetails.cshtml" />
+    <Content Include="Views\Member\Order.cshtml" />
+    <Content Include="Views\Member\PrintNewsletter.cshtml" />
+    <Content Include="Views\Company\Index.cshtml" />
+    <Content Include="Views\ShareLink\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
