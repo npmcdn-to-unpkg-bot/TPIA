@@ -209,13 +209,6 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="BackEnd\NewsIndex.aspx.cs">
-      <DependentUpon>NewsIndex.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BackEnd\NewsIndex.aspx.designer.cs">
-      <DependentUpon>NewsIndex.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Common\Adaptor\IWebApiAdaptor.cs" />
     <Compile Include="Common\Adaptor\TLApiAdaptor.cs" />
     <Compile Include="Common\Convertor\ListToDataTable.cs" />
@@ -263,62 +256,6 @@
     <Compile Include="Entity\ShareLink\Contexts\ShareLinkContext.Views.cs" />
     <Compile Include="Entity\ShareLink\Entities\ShareLink.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
-    <Compile Include="FrondEnd\NewsActivity.aspx.cs">
-      <DependentUpon>NewsActivity.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrondEnd\NewsActivity.aspx.designer.cs">
-      <DependentUpon>NewsActivity.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrondEnd\NewsProject.aspx.cs">
-      <DependentUpon>NewsProject.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrondEnd\NewsProject.aspx.designer.cs">
-      <DependentUpon>NewsProject.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrondEnd\NewsClass.aspx.cs">
-      <DependentUpon>NewsClass.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrondEnd\NewsClass.aspx.designer.cs">
-      <DependentUpon>NewsClass.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrondEnd\NewsShow.aspx.cs">
-      <DependentUpon>NewsShow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrondEnd\NewsShow.aspx.designer.cs">
-      <DependentUpon>NewsShow.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrondEnd\NewsIndustry.aspx.cs">
-      <DependentUpon>NewsIndustry.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrondEnd\NewsIndustry.aspx.designer.cs">
-      <DependentUpon>NewsIndustry.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrondEnd\NewsGuild.aspx.cs">
-      <DependentUpon>NewsGuild.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrondEnd\NewsGuild.aspx.designer.cs">
-      <DependentUpon>NewsGuild.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrondEnd\Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrondEnd\Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="FrondEnd\Main.Master.cs">
-      <DependentUpon>Main.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="FrondEnd\Main.Master.designer.cs">
-      <DependentUpon>Main.Master</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -327,7 +264,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="BackEnd\NewsIndex.aspx" />
     <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap-submenu.css" />
     <Content Include="Content\bootstrap-submenu.min.css" />
@@ -396,15 +332,32 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="CSS\5grid\core-1000px.css" />
+    <Content Include="CSS\5grid\core-1200px.css" />
+    <Content Include="CSS\5grid\core-desktop.css" />
+    <Content Include="CSS\5grid\core-fluid.css" />
+    <Content Include="CSS\5grid\core-mobile.css" />
+    <Content Include="CSS\5grid\core-noscript.css" />
+    <Content Include="CSS\5grid\core.css" />
+    <Content Include="CSS\5grid\html5shiv.js" />
+    <Content Include="CSS\5grid\init.js" />
+    <Content Include="CSS\5grid\mobileUI-beveled.css" />
+    <Content Include="CSS\5grid\mobileUI-flat.css" />
+    <Content Include="CSS\images\img01.png" />
+    <Content Include="CSS\images\img02.png" />
+    <Content Include="CSS\images\img03.png" />
+    <Content Include="CSS\images\img04.png" />
+    <Content Include="CSS\images\img06.png" />
+    <Content Include="CSS\images\img07.png" />
+    <Content Include="CSS\images\img09.png" />
+    <Content Include="CSS\images\img10.png" />
+    <Content Include="CSS\images\spacer.gif" />
+    <Content Include="CSS\style-1000px.css" />
+    <Content Include="CSS\style-desktop.css" />
+    <Content Include="CSS\style-mobile.css" />
+    <Content Include="CSS\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="FrondEnd\NewsActivity.aspx" />
-    <Content Include="FrondEnd\NewsProject.aspx" />
-    <Content Include="FrondEnd\NewsClass.aspx" />
-    <Content Include="FrondEnd\NewsShow.aspx" />
-    <Content Include="FrondEnd\NewsIndustry.aspx" />
-    <Content Include="FrondEnd\NewsGuild.aspx" />
-    <Content Include="FrondEnd\Index.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
@@ -418,7 +371,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
-    <Content Include="FrondEnd\Main.Master" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.woff" />
@@ -456,6 +408,12 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <None Include="Properties\PublishProfiles\Site.pubxml" />
+    <Content Include="Images\LOGO.png" />
+    <Content Include="Images\pics01.jpg" />
+    <Content Include="Images\pics02.jpg" />
+    <Content Include="Images\pics03.jpg" />
+    <Content Include="Images\pics04.jpg" />
+    <Content Include="Images\pics05.jpg" />
     <Content Include="Scripts\bootstrap-submenu.js" />
     <Content Include="Scripts\bootstrap-submenu.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -637,10 +595,24 @@
     <Content Include="Views\Member\PrintNewsletter.cshtml" />
     <Content Include="Views\Company\Index.cshtml" />
     <Content Include="Views\ShareLink\Index.cshtml" />
+    <Content Include="Views\Guild\AboutGuild.cshtml" />
+    <Content Include="Views\Guild\ContactUs.cshtml" />
+    <Content Include="Views\Guild\GuildBriefInt.cshtml" />
+    <Content Include="Views\Guild\GuildBusiness.cshtml" />
+    <Content Include="Views\Guild\GuildForm.cshtml" />
+    <Content Include="Views\Guild\GuildFormDraw.cshtml" />
+    <Content Include="Views\Guild\GuildHistory.cshtml" />
+    <Content Include="Views\News\GetEventsNewsTitleList.cshtml" />
+    <Content Include="Views\News\GetExhibitionsNoticeTitleList.cshtml" />
+    <Content Include="Views\News\GetIndustryNewsTitleList.cshtml" />
+    <Content Include="Views\News\GetProfessionalPostTitleList.cshtml" />
+    <Content Include="Views\News\GetStudiesCourseTitleList.cshtml" />
+    <Content Include="Views\News\GuildNewsTitleList.cshtml" />
+    <Content Include="Views\Shared\LayOutContent.cshtml" />
+    <Content Include="Views\Shared\LayOutIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="CSS\" />
     <Folder Include="FileUpload\Images\" />
     <Folder Include="Images\TPIA\" />
   </ItemGroup>

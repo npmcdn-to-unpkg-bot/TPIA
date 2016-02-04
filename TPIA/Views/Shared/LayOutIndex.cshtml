@@ -1,0 +1,148 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/CSS/5grid/core.css" rel="stylesheet" />
+    <link href="~/CSS/5grid/core-desktop.css" rel="stylesheet" />
+    <link href="~/CSS/5grid/core-1200px.css" rel="stylesheet" />
+    <link href="~/CSS/5grid/core-noscript.css" rel="stylesheet" />
+    <link href="~/CSS/style.css" rel="stylesheet" />
+    <link href="~/CSS/style-desktop.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-wrapper">
+            <header id="header">
+                <div class="5grid-layout 5grid">
+                    <div class="row">
+                        <div class="12u" id="logo">
+                            <!-- Logo -->
+                            <h1><a href="Home" class="mobileUI-site-name"><img src="~/Images/LOGO.png" alt="" width="590" height="101"></a></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="5grid-layout 5grid">
+                    <div class="row">
+                        <div class="12u" id="menu">
+                            <div id="menu-wrapper">
+                                <nav class="mobileUI-site-nav">
+                                    <ul>
+                                        <li class="grids">
+                                            @Html.ActionLink("關於公會", "AboutGuild", "Guild")
+                                            <ul class="drops">
+                                                <li>@Html.ActionLink("公會沿革", "GuildHistory", "Guild")</li>
+                                                <li>@Html.ActionLink("公會簡介", "GuildBriefInt", "Guild")</li>
+                                                <li>@Html.ActionLink("公會組織", "GuildForm", "Guild")</li>
+                                                <li>@Html.ActionLink("會務發展", "GuildBusiness", "Guild")</li>
+                                                <li>@Html.ActionLink("組織圖", "GuildFormDraw", "Guild")</li>
+                                            </ul>
+                                        </li>
+                                        <li class="grids">
+                                            @Html.ActionLink("公會規章", "GuildRegulation", "GuildRegulation")
+                                            <ul class="drops">
+                                                <li>@Html.ActionLink("公會章程", "GuildConstitution", "GuildRegulation")</li>
+                                                <li>@Html.ActionLink("入會須知", "MemberEnrollmentNotice", "GuildRegulation")</li>
+                                                <li>@Html.ActionLink("繳費細則", "MemberEnrollmentWithdrawalDetails", "GuildRegulation")</li>
+                                            </ul>
+                                        </li>
+                                        <li class="grids">
+                                            @Html.ActionLink("最新消息", "Index", "News")
+                                            <ul class="drops">
+                                                <li>@Html.ActionLink("公會訊息", "GuildNewsTitleList", "News")</li>
+                                                <li>@Html.ActionLink("產業快訊", "GetIndustryNewsTitleList", "News")</li>
+                                                <li>@Html.ActionLink("活動快訊", "GetEventsNewsTitleList", "News")</li>
+                                                <li>@Html.ActionLink("展覽通知", "GetExhibitionsNoticeTitleList", "News")</li>
+                                                <li>@Html.ActionLink("研習課程", "GetStudiesCourseTitleList", "News")</li>
+                                                <li>@Html.ActionLink("專業發表", "GetProfessionalPostTitleList", "News")</li>
+                                            </ul>
+                                        </li>
+                                        <li class="grids">
+                                            @Html.ActionLink("最新消息", "Index", "News")
+                                            <ul class="drops">
+                                                <li>@Html.ActionLink("印刷會訊", "PrintNewsletter", "Member")</li>
+                                                <li>@Html.ActionLink("出版品訂購", "Order", "Member")</li>
+                                                <li>@Html.ActionLink("新進會員", "index", "Company")</li>
+                                            </ul>
+                                        </li>
+                                            <li class="grids">
+                                                @Html.ActionLink("與我們聯絡", "ContactUs", "Guild")
+                                        <li class="grids">
+                                            <a href="">法令轉載</a>
+                                            <ul class="drops">
+                                                <li>@Html.ActionLink("政府公告", "GovernmentNotice", "DecreeReproduced")</li>
+                                                <li>@Html.ActionLink("常用法令", "CommonDecree", "DecreeReproduced")</li>
+                                                <li><a href="">統計資料</a></li>
+                                            </ul>
+                                        </li>
+
+                                        </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+        </div>
+        
+        
+        <div class="5grid-layout 5grid">
+            <div class="row" id="footer-content">
+                <div class="4u" id="box1">
+                    <section>
+                        <h2>Latest News</h2>
+                        <ul class="style4">
+                            <li>@Html.ActionLink("公會訊息", "GuildNewsTitleList", "News")</li>
+                            <li>@Html.ActionLink("產業快訊", "GetIndustryNewsTitleList", "News")</li>
+                            <li>@Html.ActionLink("活動快訊", "GetEventsNewsTitleList", "News")</li>
+                            <li>@Html.ActionLink("展覽通知", "GetExhibitionsNoticeTitleList", "News")</li>
+                            <li>@Html.ActionLink("研習課程", "GetStudiesCourseTitleList", "News")</li>
+                            <li>@Html.ActionLink("專業發表", "GetProfessionalPostTitleList", "News")</li>
+                        </ul>
+                    </section>
+
+                </div>
+                <div class="4u" id="box2">
+                    <section>
+                        <h2>Members Only</h2>
+                        <ul class="style4">
+                            <li>@Html.ActionLink("印刷會訊", "PrintNewsletter", "Member")</li>
+                            <li>@Html.ActionLink("出版品訂購", "Order", "Member")</li>
+                            <li>@Html.ActionLink("新進會員", "index", "Company")</li>
+                            <li><a href="">會員名錄</a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="4u" id="box3">
+                    <section>
+                        <h2>Reprinted Act</h2>
+                        <ul class="style4">
+                            <li>@Html.ActionLink("政府公告", "GovernmentNotice", "DecreeReproduced")</li>
+                            <li>@Html.ActionLink("常用法令", "CommonDecree", "DecreeReproduced")</li>
+                            <li><a href="">統計資料</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>    
+            
+    </div>
+    <div id="copyright" class="5grid-layout 5grid">
+        <section>
+            <p>台灣區印刷暨機器材料工業同業公會 | 台北市仁愛路二段71號6樓A室 | TEL：（02）2341-8034~5 | FAX：02-2391-9294</p>
+            <p>E-mail：tpia0271@ms37.hinet.net</p>
+        </section>
+    </div>
+</body>
+</html>

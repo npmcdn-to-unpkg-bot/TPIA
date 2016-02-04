@@ -1,6 +1,68 @@
-﻿@{
+﻿@model IEnumerable<TPIA.Common.DTO.News.GetNewsListReturnDTO>
+
+@{
     ViewBag.Title = "首頁";
+    Layout = "~/Views/Shared/LayOutIndex.cshtml";
 }
+
+<div id="page-wrapper" class="5grid-layout 5grid">
+    <div class="5grid-layout 5grid">
+        <div class="row">
+            <div class="12u">
+                <div id="banner"><a href="#"><img src="~/Images/pics01.jpg" alt=""></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="5grid-layout 5grid">
+        <div class="row">
+            <div class="6u">
+                <div id="content">
+                    <section>
+                        <div class="post">
+                            <h2>產業動態</h2>
+                            <p><a href="#"><img src="~/Images/pics02.jpg" alt="" class="img-alignleft"></a>印刷及資料儲存媒體複製業104年第三季生產指數為81.95，較去年同季下滑4.66%，生產已連續七季為衰退表現，衰退幅度較上季些微擴大；最近三個月（104年6月至8月）的銷售指數為81.59，較去年同期減少5.01%；產業細項方面，本業主力產業印刷業近三個月（104年6月至8月）之生產指數表現較去年同期減少6.57%，印刷輔助業則衰退3.22%。</p>
+                            <p>中國當地印刷製版業者產能過剩，其大量印刷之CTP版材（Computer to Plate）以及膠版在匯率及關稅優勢下，大量且低價搶攻東南亞市場，對國內廠印刷輔助業者產生價格競爭以及供應鏈轉變的壓力；另外，名產、奢侈品等外包裝印刷在近半年出現遲滯現象，電子產品包材印刷需求、房地產廣告單印刷需求則呈現顯著衰退；整體來說，受到大環境不佳衝擊之影響，本業產銷仍延續103年以來的持續衰退態勢。根據主計總處最新公布，受到出口與民間消費成長幅度低於預期影響，104年第三季經濟成長率概估為-1.01%，經濟成長力道疲弱影響民生消費力道，進而使得相關紙本印刷如雜誌、書籍、月曆、宣傳單、型錄、廣告單等預期都將明顯減少。</p>
+                            <p>展望未來，雖然業者積極轉型，但預期第四季國內消費回升力道薄弱，持續影響本業景氣；在大環境不佳影響之下，預期本業104年第四季生產指數為92.12，較103年同期衰退4.08%。</p>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="3u" id="sidebar1">
+                <section>
+                    <h2>最新訊息</h2>
+                    <ul class="style1">
+                    @foreach (TPIA.Common.DTO.News.GetNewsListReturnDTO item in Model)
+                    {
+                        <li>
+                            @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
+                        </li>
+                    }
+                    </ul>
+                </section>
+            </div>
+            <div class="3u">
+                <div id="sidebar2">
+                    <section>
+                        <div class="sbox1">
+                            <h2>友好連結</h2>
+                            <ul class="style1">
+                                @*@foreach (TPIA.Common.DTO.News.GetNewsListReturnDTO item in Model)
+                                {
+                                    <li>
+                                        @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
+                                    </li>
+                                }*@
+                            </ul>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @*<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function () {
@@ -30,6 +92,6 @@
             }
         }*@
 
-    @Html.ActionLink("後臺管理","BackEndIndex","News")
+    @*@Html.ActionLink("後臺管理","BackEndIndex","News")*@
 </div>
 

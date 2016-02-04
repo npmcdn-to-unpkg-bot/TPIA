@@ -25,6 +25,73 @@ namespace TPIA.Controllers
         }
 
         /// <summary>
+        /// 取得公會訊息標題列表
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GuildNewsTitleList()
+        {
+            string url = "api/News/GetGuildNewsTitleList";
+            List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
+            return View(resultDto);
+        }
+
+        /// <summary>
+        /// 取得產業快訊標題列表
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetIndustryNewsTitleList()
+        {
+            string url = "api/News/GetIndustryNewsTitleList";
+            List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
+            return View(resultDto);
+        }
+
+        /// <summary>
+        /// 取得活動快訊標題列表
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetEventsNewsTitleList()
+        {
+            string url = "api/News/GetEventsNewsTitleList";
+            List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
+            return View(resultDto);
+        }
+
+        /// <summary>
+        /// 取得展覽通知標題列表
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetExhibitionsNoticeTitleList()
+        {
+            string url = "api/News/GetExhibitionsNoticeTitleList";
+            List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
+            return View(resultDto);
+        }
+
+        /// <summary>
+        /// 取得研習課程標題列表
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetStudiesCourseTitleList()
+        {
+            string url = "api/News/GetStudiesCourseTitleList";
+            List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
+            return View(resultDto);
+        }
+
+        /// <summary>
+        /// 取得專業發表標題列表
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetProfessionalPostTitleList()
+        {
+            string url = "api/News/GetProfessionalPostTitleList";
+            List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
+            return View(resultDto);
+        }
+
+
+        /// <summary>
         /// 取得 最新消息內文 - Web
         /// </summary>
         /// <param name="NewsId"></param>

@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<TPIA.Common.DTO.News.GetNewsListReturnDTO>
 
 @{
+    Layout = "~/Views/Shared/LayOutContent.cshtml";
     ViewBag.Title = "最新消息";
 }
 <div id="_container" style="width:800px; overflow:hidden; margin:0 auto;">
@@ -9,8 +10,7 @@
     <table>
         <tr>            
             <th>
-                @*@Html.DisplayNameFor(model => model.NewsCategory)*@
-                <h4>消息分類</h4>
+                <h4>分類</h4>
             </th>
             <th>
                 <h4>標題</h4>

@@ -8,94 +8,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台灣區印刷暨機器材料工業同業公會管理後臺</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
-    <meta name="description" content="台灣區印刷暨機器材料工業同業公會Welcome to Taiwan Printing Industry Association" />
-</head>
+        @Scripts.Render("~/bundles/modernizr")
+    <link href="~/CSS/style-desktop.css" rel="stylesheet" />
+    <link href="~/CSS/style.css" rel="stylesheet" />
+    <meta name="description" content="台灣區印刷暨機器材料工業同業公會Welcome to Taiwan Printing Industry Association" /></head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="@Url.Action("Index","Home")">
-                    <h1><span class="glyphicon glyphicon-home" />TPIA</h1>
-                </a>
-                <div class="navbar-brand">
-                    @*<h2>Hello, User !</h2>*@
+    
+    
+    <div id="wrapper">
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                        <h1><span class="glyphicon glyphicon-home" />TPIA</h1>
+                    </a>
+                    <div class="navbar-brand">
+                        @*<h2>Hello, User !</h2>*@
+                    </div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav ">
+                        @*<li><a href="#main">主頁</a></li>*@
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">關於公會 <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("關於公會", "AboutGuild", "Guild")</li>
+                                <li>@Html.ActionLink("公會沿革", "GuildHistory", "Guild")</li>
+                                <li>@Html.ActionLink("公會簡介", "GuildBriefInt", "Guild")</li>
+                                <li>@Html.ActionLink("公會組織", "GuildForm", "Guild")</li>
+                                <li>@Html.ActionLink("會務發展", "GuildBusiness", "Guild")</li>
+                                <li>@Html.ActionLink("組織圖", "GuildFormDraw", "Guild")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">公會規章 <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("公會規章", "GuildRegulation", "GuildRegulation")</li>
+                                <li>@Html.ActionLink("公會章程", "GuildConstitution", "GuildRegulation")</li>
+                                <li>@Html.ActionLink("入會須知", "MemberEnrollmentNotice", "GuildRegulation")</li>
+                                <li>@Html.ActionLink("繳費細則", "MemberEnrollmentWithdrawalDetails", "GuildRegulation")</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">最新消息 <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("最新消息", "Index", "News")</li>
+                                <li>@Html.ActionLink("公會訊息", "GuildNewsTitleList", "News")</li>
+                                <li>@Html.ActionLink("產業快訊", "GetIndustryNewsTitleList", "News")</li>
+                                <li>@Html.ActionLink("活動快訊", "GetEventsNewsTitleList", "News")</li>
+                                <li>@Html.ActionLink("展覽通知", "GetExhibitionsNoticeTitleList", "News")</li>
+                                <li>@Html.ActionLink("研習課程", "GetStudiesCourseTitleList", "News")</li>
+                                <li>@Html.ActionLink("專業發表", "GetProfessionalPostTitleList", "News")</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">會員專區 <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("印刷會訊", "PrintNewsletter", "Member")</li>
+                                <li>@Html.ActionLink("出版訂購", "Order", "Member")</li>
+                                <li>@Html.ActionLink("新進會員", "", "")</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">與我們連絡 </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">法令轉載 <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("政府公告", "GovernmentNotice", "DecreeReproduced")</li>
+                                <li>@Html.ActionLink("常用法令", "CommonDecree", "DecreeReproduced")</li>
+                                @*<li>@Html.ActionLink("統計資料", "", "")</li>*@
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav ">
-                    @*<li><a href="#main">主頁</a></li>*@
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">關於公會 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("公會沿革", "", "")</li>
-                            <li>@Html.ActionLink("公會簡介", "", "")</li>
-                            <li>@Html.ActionLink("公會組織", "", "")</li>
-                            <li>@Html.ActionLink("會務發展", "", "")</li>
-                            <li>@Html.ActionLink("組織圖", "", "")</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">公會規章 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("公會章程", "", "")</li>
-                            <li>@Html.ActionLink("入會須知", "", "")</li>
-                            <li>@Html.ActionLink("繳費細則", "", "")</li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">最新消息 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("公會訊息", "", "")</li>
-                            <li>@Html.ActionLink("產業快訊", "", "")</li>
-                            <li>@Html.ActionLink("活動快訊", "", "")</li>
-                            <li>@Html.ActionLink("展覽通知", "", "")</li>
-                            <li>@Html.ActionLink("研習課程", "", "")</li>
-                            <li>@Html.ActionLink("專業發表", "", "")</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">會員名錄 </a>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">相關連結 </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">會員專區 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("印刷會訊", "", "")</li>
-                            <li>@Html.ActionLink("出版訂購", "", "")</li>
-                            <li>@Html.ActionLink("新進會員", "", "")</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        <div id="header-wrapper">
+            <header id="header">
+                <div class="5grid-layout 5grid">
+                    <div class="row">
+                        <div class="12u" id="logo">
+                            <!-- Logo -->
+                            <h1><a href="index.html" class="mobileUI-site-name"><img src="images/logo.png" alt="" width="590" height="101"></a></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="5grid-layout 5grid">
+                    <div class="row">
+                        <div class="12u" id="menu">
+                            <div id="menu-wrapper">
+                                <nav class="mobileUI-site-nav">
+                                    <ul>
+                                        <li class="current_page_item"><a href="index.html">關於工會</a></li>
+                                        <li><a href="twocolumn1.html">工會規章</a></li>
+                                        <li><a href="twocolumn1.html">最新訊息</a></li>
+                                        <li><a href="twocolumn1.html">會員專區</a></li>
+                                        <li><a href="twocolumn1.html">與我們聯絡</a></li>
+                                        <li><a href="twocolumn1.html">法令轉載</a></li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
         </div>
-    </nav>
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+        </div>
+
+        <footer>
+            <p>
+                本會現址：台北市仁愛路二段71號6樓A室 <br>
+                電話：（02）2341-8034~5 傳真： 2391-9294 <br>
+                E-mail：<a href="mailto:tpia0271@ms37.hinet.net">tpia0271@ms37.hinet.net</a>&nbsp; 網址：<a href="http://www.tpia.org.tw">www.tpia.org.tw</a>
+            </p>
+        </footer>
     </div>
-
-    <footer>
-        <p>
-            本會現址：台北市仁愛路二段71號6樓A室 <br>
-            電話：（02）2341-8034~5 傳真： 2391-9294 <br>
-            E-mail：<a href="mailto:tpia0271@ms37.hinet.net">tpia0271@ms37.hinet.net</a>&nbsp; 網址：<a href="http://www.tpia.org.tw">www.tpia.org.tw</a>
-        </p>
-    </footer>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/bootstrap-submenu")
-    <script type="text/javascript" src="~/Scripts/wow.min.js"></script>
-    @Scripts.Render("~/bundles/custom")
-    @RenderSection("scripts", required: false)
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/bootstrap-submenu")
+        <script type="text/javascript" src="~/Scripts/wow.min.js"></script>
+        @Scripts.Render("~/bundles/custom")
+        @RenderSection("scripts", required: false)
 </body>
 </html>

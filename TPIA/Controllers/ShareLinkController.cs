@@ -21,6 +21,13 @@ namespace TPIA.Controllers
             return View(resultDto);
         }
 
+        public ActionResult LayOutContent()
+        {
+            string url = "api/Link/GetShareLinkList";
+            List<GetShareLinkListReturnDTO> resultDto = _apiAdaptor.Get<List<GetShareLinkListReturnDTO>>(url);
+            return View(resultDto);
+        }
+
         ///// <summary>
         ///// 取得 最新消息內文 - Web
         ///// </summary>
@@ -67,7 +74,7 @@ namespace TPIA.Controllers
             EditShareLinkRequestDTO dto = new EditShareLinkRequestDTO()
             {
                 LID = result.LID,
-                Category=result.Category,
+                Category = result.Category,
                 Title = result.Title,
                 Description = result.Description,
                 ImgUrl = result.ImgUrl,

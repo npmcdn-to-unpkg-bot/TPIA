@@ -396,24 +396,6 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="F:TPIA.BackEnd.NewsIndex.btn_Add">
-            <summary>
-            btn_Add 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
-        </member>
-        <member name="F:TPIA.BackEnd.NewsIndex.GridView1">
-            <summary>
-            GridView1 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
-        </member>
         <member name="T:TPIA.Common.DTO.Company.AddCompanyInfoRequestDTO">
             <summary>
             企業會員資訊
@@ -996,6 +978,42 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:TPIA.Controllers.Api.NewsController.GetGuildNewsTitleList">
+            <summary>
+            取得 公會訊息標題清單
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.Api.NewsController.GetIndustryNewsTitleList">
+            <summary>
+            取得 公會訊息標題清單
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.Api.NewsController.GetEventsNewsTitleList">
+            <summary>
+            取得 公會訊息標題清單
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.Api.NewsController.GetExhibitionsNoticeTitleList">
+            <summary>
+            取得 公會訊息標題清單
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.Api.NewsController.GetStudiesCourseTitleList">
+            <summary>
+            取得 公會訊息標題清單
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.Api.NewsController.GetProfessionalPostTitleList">
+            <summary>
+            取得 公會訊息標題清單
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:TPIA.Controllers.Api.NewsController.GetNewsContent(System.Int32)">
             <summary>
             取得 最新消息內文
@@ -1085,6 +1103,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:TPIA.Controllers.GuildController.ContactUs">
+            <summary>
+            與我們連絡
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:TPIA.Controllers.GuildRegulationController.GuildRegulation">
             <summary>
             公會規章
@@ -1126,6 +1150,7 @@
             </summary>
             <returns></returns>
         </member>
+        <!-- 忽略成員 "M:TPIA.Controllers.MemberController.Index" 中格式錯誤的 XML 註解 -->
         <member name="M:TPIA.Controllers.MemberController.PrintNewsletter">
             <summary>
             印刷會訊
@@ -1142,6 +1167,42 @@
             <summary>
             最新消息 - Web
             </summary>
+        </member>
+        <member name="M:TPIA.Controllers.NewsController.GuildNewsTitleList">
+            <summary>
+            取得公會訊息標題列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.NewsController.GetIndustryNewsTitleList">
+            <summary>
+            取得產業快訊標題列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.NewsController.GetEventsNewsTitleList">
+            <summary>
+            取得活動快訊標題列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.NewsController.GetExhibitionsNoticeTitleList">
+            <summary>
+            取得展覽通知標題列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.NewsController.GetStudiesCourseTitleList">
+            <summary>
+            取得研習課程標題列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TPIA.Controllers.NewsController.GetProfessionalPostTitleList">
+            <summary>
+            取得專業發表標題列表
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:TPIA.Controllers.NewsController.NewsContent(System.Int32)">
             <summary>
@@ -1248,96 +1309,6 @@
             <summary>
             Gets a hash value computed over the mapping closure.
             </summary>
-        </member>
-        <member name="F:TPIA.FrondEnd.NewsActivity.GridView1">
-            <summary>
-            GridView1 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
-        </member>
-        <member name="F:TPIA.FrondEnd.NewsProject.GridView1">
-            <summary>
-            GridView1 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
-        </member>
-        <member name="F:TPIA.FrondEnd.NewsClass.GridView1">
-            <summary>
-            GridView1 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
-        </member>
-        <member name="F:TPIA.FrondEnd.NewsShow.GridView1">
-            <summary>
-            GridView1 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
-        </member>
-        <member name="F:TPIA.FrondEnd.NewsIndustry.GridView1">
-            <summary>
-            GridView1 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
-        </member>
-        <member name="F:TPIA.FrondEnd.NewsGuild.GridView1">
-            <summary>
-            GridView1 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
-        </member>
-        <member name="F:TPIA.FrondEnd.Index.GridView1">
-            <summary>
-            GridView1 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
-        </member>
-        <member name="F:TPIA.FrondEnd.Main.head">
-            <summary>
-            head 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
-        </member>
-        <member name="F:TPIA.FrondEnd.Main.form1">
-            <summary>
-            form1 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
-        </member>
-        <member name="F:TPIA.FrondEnd.Main.ContentPlaceHolder1">
-            <summary>
-            ContentPlaceHolder1 控制項。
-            </summary>
-            <remarks>
-            自動產生的欄位。
-            將移動欄位宣告從設計檔案修改為程式碼後置檔案。
-            </remarks>
         </member>
     </members>
 </doc>

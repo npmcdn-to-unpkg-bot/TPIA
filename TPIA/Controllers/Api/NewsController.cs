@@ -16,6 +16,8 @@ namespace TPIA.Controllers.Api
     {
         private NewsContext _dbContext = new NewsContext();
 
+
+
         #region [ 取得最新消息標題清單 ]
         /// <summary>
         /// 取得 最新消息標題清單
@@ -49,6 +51,211 @@ namespace TPIA.Controllers.Api
             return lsreturnDto;
         }
         #endregion
+
+        #region [ 取得公會訊息標題清單 ]
+        /// <summary>
+        /// 取得 公會訊息標題清單
+        /// </summary>
+        /// <returns></returns>
+        public List<GetNewsListReturnDTO> GetGuildNewsTitleList()
+        {
+            List<GetNewsListReturnDTO> lsreturnDto = new List<GetNewsListReturnDTO>();
+
+            try
+            {
+                IEnumerable<News> dbSet = _dbContext.Set<News>().Where(o => o.IsEnable == true && o.Category == enNewsCategory.Guild.ToString()).OrderByDescending(o => o.CreateTime);
+
+                foreach (News item in dbSet)
+                {
+                    GetNewsListReturnDTO newDto = new GetNewsListReturnDTO()
+                    {
+                        NewsID = item.ID,
+                        NewsTitle = item.Title,
+                        NewsCategory = item.Category,
+                        CreateDate = item.CreateTime
+                    };
+                    lsreturnDto.Add(newDto);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            return lsreturnDto;
+        }
+        #endregion
+
+        #region [ 取得產業快訊標題清單 ]
+        /// <summary>
+        /// 取得 公會訊息標題清單
+        /// </summary>
+        /// <returns></returns>
+        public List<GetNewsListReturnDTO> GetIndustryNewsTitleList()
+        {
+            List<GetNewsListReturnDTO> lsreturnDto = new List<GetNewsListReturnDTO>();
+
+            try
+            {
+                IEnumerable<News> dbSet = _dbContext.Set<News>().Where(o => o.IsEnable == true && o.Category == enNewsCategory.Industry.ToString()).OrderByDescending(o => o.CreateTime);
+
+                foreach (News item in dbSet)
+                {
+                    GetNewsListReturnDTO newDto = new GetNewsListReturnDTO()
+                    {
+                        NewsID = item.ID,
+                        NewsTitle = item.Title,
+                        NewsCategory = item.Category,
+                        CreateDate = item.CreateTime
+                    };
+                    lsreturnDto.Add(newDto);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            return lsreturnDto;
+        }
+        #endregion
+
+        #region [ 取得活動快訊標題清單 ]
+        /// <summary>
+        /// 取得 公會訊息標題清單
+        /// </summary>
+        /// <returns></returns>
+        public List<GetNewsListReturnDTO> GetEventsNewsTitleList()
+        {
+            List<GetNewsListReturnDTO> lsreturnDto = new List<GetNewsListReturnDTO>();
+
+            try
+            {
+                IEnumerable<News> dbSet = _dbContext.Set<News>().Where(o => o.IsEnable == true && o.Category == enNewsCategory.Activity.ToString()).OrderByDescending(o => o.CreateTime);
+
+                foreach (News item in dbSet)
+                {
+                    GetNewsListReturnDTO newDto = new GetNewsListReturnDTO()
+                    {
+                        NewsID = item.ID,
+                        NewsTitle = item.Title,
+                        NewsCategory = item.Category,
+                        CreateDate = item.CreateTime
+                    };
+                    lsreturnDto.Add(newDto);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            return lsreturnDto;
+        }
+        #endregion
+
+        #region [ 取得展覽通知標題清單 ]
+        /// <summary>
+        /// 取得 公會訊息標題清單
+        /// </summary>
+        /// <returns></returns>
+        public List<GetNewsListReturnDTO> GetExhibitionsNoticeTitleList()
+        {
+            List<GetNewsListReturnDTO> lsreturnDto = new List<GetNewsListReturnDTO>();
+
+            try
+            {
+                IEnumerable<News> dbSet = _dbContext.Set<News>().Where(o => o.IsEnable == true && o.Category == enNewsCategory.Show.ToString()).OrderByDescending(o => o.CreateTime);
+
+                foreach (News item in dbSet)
+                {
+                    GetNewsListReturnDTO newDto = new GetNewsListReturnDTO()
+                    {
+                        NewsID = item.ID,
+                        NewsTitle = item.Title,
+                        NewsCategory = item.Category,
+                        CreateDate = item.CreateTime
+                    };
+                    lsreturnDto.Add(newDto);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            return lsreturnDto;
+        }
+        #endregion
+
+        #region [ 取得研習課程標題清單 ]
+        /// <summary>
+        /// 取得 公會訊息標題清單
+        /// </summary>
+        /// <returns></returns>
+        public List<GetNewsListReturnDTO> GetStudiesCourseTitleList()
+        {
+            List<GetNewsListReturnDTO> lsreturnDto = new List<GetNewsListReturnDTO>();
+
+            try
+            {
+                IEnumerable<News> dbSet = _dbContext.Set<News>().Where(o => o.IsEnable == true && o.Category == enNewsCategory.Class.ToString()).OrderByDescending(o => o.CreateTime);
+
+                foreach (News item in dbSet)
+                {
+                    GetNewsListReturnDTO newDto = new GetNewsListReturnDTO()
+                    {
+                        NewsID = item.ID,
+                        NewsTitle = item.Title,
+                        NewsCategory = item.Category,
+                        CreateDate = item.CreateTime
+                    };
+                    lsreturnDto.Add(newDto);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            return lsreturnDto;
+        }
+        #endregion
+
+        #region [ 取得專業發表標題清單 ]
+        /// <summary>
+        /// 取得 公會訊息標題清單
+        /// </summary>
+        /// <returns></returns>
+        public List<GetNewsListReturnDTO> GetProfessionalPostTitleList()
+        {
+            List<GetNewsListReturnDTO> lsreturnDto = new List<GetNewsListReturnDTO>();
+
+            try
+            {
+                IEnumerable<News> dbSet = _dbContext.Set<News>().Where(o => o.IsEnable == true && o.Category == enNewsCategory.Project.ToString()).OrderByDescending(o => o.CreateTime);
+
+                foreach (News item in dbSet)
+                {
+                    GetNewsListReturnDTO newDto = new GetNewsListReturnDTO()
+                    {
+                        NewsID = item.ID,
+                        NewsTitle = item.Title,
+                        NewsCategory = item.Category,
+                        CreateDate = item.CreateTime
+                    };
+                    lsreturnDto.Add(newDto);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            return lsreturnDto;
+        }
+        #endregion
+
 
         #region [ 取得最新消息內文 ]
         /// <summary>

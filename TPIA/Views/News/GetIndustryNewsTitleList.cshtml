@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TPIA.Common.DTO.News.GetNewsListReturnDTO>
+
+@{
+    Layout = "~/Views/Shared/LayOutContent.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>產業快訊</title>
+</head>
+<body>
+    <h2>產業快訊</h2>
+    <table>
+        <tr>
+            <th>
+                <h4>分類</h4>
+            </th>
+            <th>
+                <h4>標題</h4>
+            </th>
+            <th>
+                <h4>建立時間</h4>
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewsCategory)
+            </td>
+            <td>
+                @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDate)
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

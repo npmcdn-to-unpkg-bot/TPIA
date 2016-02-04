@@ -69,5 +69,14 @@ namespace TPIA.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// 與我們連絡
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
     }
 }

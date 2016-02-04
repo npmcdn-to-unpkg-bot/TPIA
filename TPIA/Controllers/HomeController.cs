@@ -19,8 +19,10 @@ namespace TPIA.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
-        {            
-            return View();
+        {
+            string url = "api/News/GetNewsTitleList";
+            List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
+            return View(resultDto);
         }
 
         /// <summary>

@@ -10,7 +10,7 @@ namespace TPIA.Controllers
     {
         //
         // GET: /Member/
-
+        /// <summary>
         public ActionResult Index()
         {
             return View();
