@@ -13,12 +13,12 @@
 </head>
 <body>
     <h2>產業快訊</h2>
-    <table>
+    <table class="tab">
         <tr>
             <th>
                 <h4>分類</h4>
             </th>
-            <th>
+            <th width="528">
                 <h4>標題</h4>
             </th>
             <th>
@@ -26,21 +26,22 @@
             </th>
             <th></th>
         </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NewsCategory)
-            </td>
-            <td>
-                @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreateDate)
-            </td>
-        </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td align="center">
+                    @Html.DisplayFor(modelItem => item.NewsCategory)
+                </td>
+                <td>
+                    @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
+                </td>
+                <td align="center">
+                    @Html.DisplayFor(modelItem => item.CreateDate)
+                </td>
+            </tr>
+        }
+
     </table>
 </body>
 </html>

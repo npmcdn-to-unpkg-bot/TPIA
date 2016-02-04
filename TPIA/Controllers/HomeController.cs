@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TPIA.Common.DTO.News;
+using TPIA.Common.DTO.ShareLink;
 
 namespace TPIA.Controllers
 {
@@ -20,9 +21,15 @@ namespace TPIA.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            string url = "api/News/GetNewsTitleList";
-            List<GetNewsListReturnDTO> resultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(url);
-            return View(resultDto);
+            string Nurl = "api/News/GetNewsTitleList";
+            List<GetNewsListReturnDTO> NresultDto = _apiAdaptor.Get<List<GetNewsListReturnDTO>>(Nurl);
+            ViewBag.NewsList = NresultDto.Take(10);
+
+            string Lurl = "api/Link/GetShareLinkList";
+            List<GetShareLinkListReturnDTO> LresultDto = _apiAdaptor.Get<List<GetShareLinkListReturnDTO>>(Lurl);
+            ViewBag.LinkList = LresultDto.Take(5);
+
+            return View();
         }
 
         /// <summary>

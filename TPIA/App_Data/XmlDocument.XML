@@ -960,6 +960,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:TPIA.Controllers.Api.LinkController.GetShareLinkListTop10">
+            <summary>
+            取得 企業會員名錄清單 TOP 10
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:TPIA.Controllers.Api.LinkController.GetLinkDetail(System.Int32)">
             <summary>
             取得 企業會員詳細資料

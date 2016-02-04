@@ -5,6 +5,7 @@ using TPIA.Common.DTO.ShareLink;
 using TPIA.Common.Enumeration;
 using TPIA.Entity.ShareLink.Contexts;
 using TPIA.Entity.ShareLink.Entities;
+using System.Linq;
 
 namespace TPIA.Controllers.Api
 {
@@ -26,7 +27,7 @@ namespace TPIA.Controllers.Api
 
             try
             {
-                var dbSet = _dbContext.Set<ShareLink>();
+                var dbSet = _dbContext.Set<ShareLink>().OrderByDescending(o => o.LID);
 
                 foreach (ShareLink item in dbSet)
                 {
@@ -40,7 +41,41 @@ namespace TPIA.Controllers.Api
                         LinkUrl = item.LinkUrl
                     };
                     lsreturnDto.Add(newDto);
-                }                
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            return lsreturnDto;
+        }
+
+        /// <summary>
+        /// 取得 企業會員名錄清單 TOP 10
+        /// </summary>
+        /// <returns></returns>
+        public List<GetShareLinkListReturnDTO> GetShareLinkListTop10()
+        {
+            List<GetShareLinkListReturnDTO> lsreturnDto = new List<GetShareLinkListReturnDTO>();
+
+            try
+            {
+                IEnumerable<ShareLink> dbSet = _dbContext.Set<ShareLink>().OrderByDescending(o => o.LID).Take(10);
+
+                foreach (ShareLink item in dbSet)
+                {
+                    GetShareLinkListReturnDTO newDto = new GetShareLinkListReturnDTO()
+                    {
+                        LID = item.LID,
+                        Category = (enLinkCategory)Enum.Parse(typeof(enLinkCategory), item.Category),
+                        Title = item.Title,
+                        Description = item.Description,
+                        ImgUrl = item.ImgUrl,
+                        LinkUrl = item.LinkUrl
+                    };
+                    lsreturnDto.Add(newDto);
+                }
             }
             catch (Exception ex)
             {

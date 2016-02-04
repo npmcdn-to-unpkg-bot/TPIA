@@ -13,114 +13,122 @@
 </head>
 <body>
     <div>
-        <fieldset>
-            <legend>企業資訊</legend>
+        
+        <div class="memTilte">企業資訊</div> 
 
-            <div class="display-label">
+        <div class="mem_list">
+            <div class="smTilte">
                 公司名稱
             </div>
-            <div class="display-field">
+            <div class="smTxt">
                 @Html.DisplayFor(model => model.CompanyName)
             </div>
-
-            <div class="display-label">
+        </div>
+        <div class="mem_list">
+            <div class="smTilte">
                 公司負責人
             </div>
-            <div class="display-field">
+            <div class="smTxt">
                 @Html.DisplayFor(model => model.Manager)
             </div>
-
-            <div class="display-label">
+            </div>
+        <div class="mem_list">
+            <div class="smTilte">
                 業務聯絡人
             </div>
-            <div class="display-field">
+            <div class="smTxt">
                 @Html.DisplayFor(model => model.Sales)
             </div>
-
-            <div class="display-label">
+            </div>
+        <div class="mem_list">
+            <div class="smTilte">
                 公司簡介
             </div>
-            <div class="display-field">
+            <div class="smTxt">
                 @Html.DisplayFor(model => model.AboutUs)
             </div>
-
-            <div class="display-label">
+            </div>
+        <div class="mem_list">
+            <div class="smTilte">
                 公司地址
             </div>
-            <div class="display-field">
+            <div class="smTxt">
                 @Html.DisplayFor(model => model.Address)
             </div>
-
-            <div class="display-label">
+            </div>
+        <div class="mem_list">
+            <div class="smTilte">
                 公司電話
             </div>
-            <div class="display-field">
+            <div class="smTxt">
                 @Html.DisplayFor(model => model.Phone)
             </div>
-
-            <div class="display-label">
+            </div>
+        <div class="mem_list">
+            <div class="smTilte">
                 公司傳真
             </div>
-            <div class="display-field">
+            <div class="smTxt">
                 @Html.DisplayFor(model => model.Tax)
             </div>
-
-            <div class="display-label">
+            </div>
+        <div class="mem_list">
+            <div class="smTilte">
                 電子信箱
             </div>
-            <div class="display-field">
+            <div class="smTxt">
                 @Html.DisplayFor(model => model.EMail)
             </div>
-
-            <div class="display-label">
+            </div>
+        <div class="mem_list">
+            <div class="smTilte">
                 主要產品
             </div>
-            <div class="display-field">
+            <div class="smTxt">
                 @Html.DisplayFor(model => model.MainProducts)
-            </div>
-
-            <div class="display-label">
+            </div></div>
+        <div class="mem_list">
+            <div class="smTilte">
                 公司網址
             </div>
-            <div class="display-field">
+            <div class="smTxt">
                 @Html.DisplayFor(model => model.SiteURL)
             </div>
-        </fieldset>
-        <br />
-        <fieldset>
-            <legend>產品資訊</legend>
+            </div>
 
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>產品名稱</th>
-                        <th>產品描述</th>
-                        <th>產品圖片</th>
-                    </tr>
-                </thead>
-                <tbody id="myTable">
-                    @if (Model.Products.Count() > 0)
-                    {
-                        foreach (var item in Model.Products)
-                        {
-                            <tr>
-                                <td>@item.ProductTitle</td>
-                                <td>@item.ProductDesc</td>
-                                <td>@item.ProductImgURL</td>
-                            </tr>
-                        }
-                    }
-                    else
+           <br /><br /> 
+        <div class="memTilte">產品資訊</div>
+
+        <table class="protab">
+            <thead>
+                <tr>
+                    <th>產品名稱</th>
+                    <th>產品描述</th>
+                    <th>產品圖片</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                @if (Model.Products.Count() > 0)
+                {
+                    foreach (var item in Model.Products)
                     {
                         <tr>
-                            <td colspan="3">無資料</td>
+                            <td>@item.ProductTitle</td>
+                            <td>@item.ProductDesc</td>
+                            <td>@item.ProductImgURL</td>
                         </tr>
                     }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="3">無資料</td>
+                    </tr>
+                }
 
-                </tbody>
-            </table>
+            </tbody>
+        </table>
 
-        </fieldset>
-    </div>
+        </div>
 </body>
 </html>

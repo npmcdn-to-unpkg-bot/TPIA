@@ -1,8 +1,11 @@
-﻿@model IEnumerable<TPIA.Common.DTO.News.GetNewsListReturnDTO>
+﻿@*model IEnumerable<TPIA.Common.DTO.News.GetNewsListReturnDTO>*@
 
 @{
     ViewBag.Title = "首頁";
     Layout = "~/Views/Shared/LayOutIndex.cshtml";
+
+    IEnumerable<TPIA.Common.DTO.News.GetNewsListReturnDTO> NewsList = (IEnumerable<TPIA.Common.DTO.News.GetNewsListReturnDTO>)ViewBag.NewsList;
+    IEnumerable<TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO> LinkList = (IEnumerable<TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO>)ViewBag.LinkList;
 }
 
 <div id="page-wrapper" class="5grid-layout 5grid">
@@ -32,12 +35,15 @@
                 <section>
                     <h2>最新訊息</h2>
                     <ul class="style1">
-                    @foreach (TPIA.Common.DTO.News.GetNewsListReturnDTO item in Model)
-                    {
-                        <li>
-                            @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
-                        </li>
-                    }
+                        @if (NewsList != null && NewsList.Count() > 0)
+                        {
+                            foreach (TPIA.Common.DTO.News.GetNewsListReturnDTO item in NewsList)
+                            {
+                                <li>
+                                    @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
+                                </li>
+                            }
+                        }
                     </ul>
                 </section>
             </div>
@@ -47,12 +53,24 @@
                         <div class="sbox1">
                             <h2>友好連結</h2>
                             <ul class="style1">
-                                @*@foreach (TPIA.Common.DTO.News.GetNewsListReturnDTO item in Model)
+                                @if (LinkList != null && LinkList.Count() > 0)
                                 {
-                                    <li>
-                                        @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
-                                    </li>
-                                }*@
+                                    foreach (TPIA.Common.DTO.ShareLink.GetShareLinkListReturnDTO item in LinkList)
+                                    {
+                                        <li>
+                                            @if (String.IsNullOrEmpty(item.LinkUrl))
+                                            {
+                                                <span>@item.Title</span>
+                                            }
+                                            else
+                                            {
+                                                <a href="@item.LinkUrl" title="@item.Title" target="_blank">
+                                                    <img style="width:200px;height:60px" src="@item.ImgUrl" />
+                                                </a>
+                                            }
+                                        </li>
+                                    }
+                                }
                             </ul>
                         </div>
 

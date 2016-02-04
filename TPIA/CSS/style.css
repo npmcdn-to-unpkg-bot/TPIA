@@ -26,9 +26,14 @@ body {
 
 h1, h2, h3 {
 	margin: 0px;
-	padding: 5px;
 	font-family: 'Oswald', sans-serif;
+    font-family: 微軟正黑體, Arial, Helvetica, sans-serif;
 	font-weight: 300;
+}
+
+h1{
+    font-size:20px;
+    padding:5px 0px;
 }
 
 p {
@@ -47,7 +52,7 @@ strong {
 /* Wrapper */
 
 #wrapper {
-	overflow: hidden;
+	/*overflow: hidden;*/
 	background: #D47028 url(images/img02.png) repeat;
 	padding-top: 0px;
 	padding-right: 0px;
@@ -66,7 +71,8 @@ strong {
 
 #copyright p {
 	text-align: center;
-	font-family: 'Abel', sans-serif;
+	/*font-family: 'Abel', sans-serif;*/
+    font-family: 微軟正黑體, Arial, Helvetica, sans-serif;
 	font-size: 12pt;
 	color: #AD7253;
 }
@@ -263,3 +269,91 @@ ul.style4 .first {
 	background: none;
 	padding-top: 0px;
 }
+
+/*sty*/
+
+p.text{
+    font-size:14px;
+}
+
+ol.ptxt {
+    list-style:disc;
+    margin:0 0 0 25px;
+}
+
+ol.ptxt li {
+        line-height: 25px;
+        font-size:14px;
+    }
+
+.about_textbox {
+    overflow:hidden;
+}
+
+ul.sty {
+    float:left;
+    width:50%;
+}
+
+ul.sty li {
+    font-size:14px;
+    line-height: 25px;
+    }
+
+ul.sty01 {
+}
+
+ul.sty01 li {
+    font-size:14px;
+    line-height: 25px;
+    }
+
+table.tab {
+    width:100%;
+}
+
+table.tab th {
+        font-size:16px;
+        color:#1C728F;
+        padding:5px 0px 10px 0px;
+    }
+
+table.tab td {
+        font-size:14px;
+        padding:5px;
+    }
+
+.memTilte {
+    font-size: 18px;
+    color: #9A4300;
+    padding:0 0 25px 0;
+}
+
+.mem_list {
+    padding:0 0 20px 0;
+}
+
+.smTilte{
+    color:#207493;
+    font-weight:bold;
+    font-size:16px;
+    padding:0 0 10px 0;
+}
+
+.smTxt {
+    font-size:14px;
+}
+
+table.protab {
+}
+
+table.protab th {
+        color: #207493;
+        font-size:16px;
+        padding:5px;
+    }
+
+    table.protab td {
+        padding:5px;
+        font-size:14px;
+    }

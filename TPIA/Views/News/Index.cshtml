@@ -7,33 +7,59 @@
 <div id="_container" style="width:800px; overflow:hidden; margin:0 auto;">
     <h2>最新消息</h2>
 
-    <table>
-        <tr>            
+    <table class="tab">
+        <tr>
             <th>
-                <h4>分類</h4>
+                分類
+            </th>
+            <th width="528">
+                標題
             </th>
             <th>
-                <h4>標題</h4>
-            </th>
-            <th>
-                <h4>建立時間</h4>
+                建立時間
             </th>
             <th></th>
         </tr>
 
         @foreach (TPIA.Common.DTO.News.GetNewsListReturnDTO item in Model)
         {
-            <tr>                
-                <td>
-                    @Html.DisplayFor(modelItem => item.NewsCategory)
+            string Name = string.Empty;
+            <tr>
+                <td align="center">
+                    @*@Html.DisplayFor(modelItem => item.NewsCategory)*@
+                    @switch (item.NewsCategory)
+                    {
+                        case "Activity":
+                            @(Name = "產業快訊");
+                            break;
+                        case "Class":
+                            Name = "研習課程";
+                            break;
+                        case "Guild":
+                            Name = "公會消息";
+                            break;
+                        case "Industry":
+                            Name = "活動快訊";
+                            break;
+                        case "Project":
+                            Name = "專業發表";
+                            break;
+                        case "Show":
+                            Name = "展覽通知";
+                            break;
+                        default:
+                            break;
+
+                    }                
+                    <span>@Name</span>
                 </td>
                 <td>
                     @*@Html.DisplayFor(modelItem => item.NewsTitle)*@
                     @Html.ActionLink(item.NewsTitle, "NewsContent", "News", new { NewsId = item.NewsID }, null)
                 </td>
-                <td>
+                <td align="center">
                     @Html.DisplayFor(modelItem => item.CreateDate)
-                </td>                
+                </td>
             </tr>
         }
 

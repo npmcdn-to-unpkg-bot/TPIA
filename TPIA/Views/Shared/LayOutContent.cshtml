@@ -16,8 +16,24 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/style-desktop.css" />
     </noscript>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="~/CSS/5grid/init.js?use=mobile,desktop,1000px&amp;mobileUI=1&amp;mobileUI.theme=none&amp;mobileUI.openerWidth=52"></script>
+
+    <script type="text/javascript">
+        $.ajax({            
+            url: "@System.Configuration.ConfigurationManager.AppSettings["WebAPIUrl_TL"]" + "api/Link/GetShareLinkListTop10",
+            method: "POST",
+        }).success(function (data) {
+            //console.log('11111:' + data);
+            $.each(data, function (key, value) {
+                $('#linkList').append('<li><a href="' + value.LinkUrl + '" target="_blank"><img style="width:200px;height:60px" src="' + value.ImgUrl + '" /></a></li>');
+            });
+        }).error(function (e) {
+            console.log(e);
+        });
+    </script>
+
 </head>
 <body>
     <div id="wrapper">
@@ -75,7 +91,7 @@
                                             </ul>
                                         </li>
                                         <li class="grids">
-                                        @Html.ActionLink("與我們聯絡", "ContactUs", "Guild")
+                                            @Html.ActionLink("與我們聯絡", "ContactUs", "Guild")
                                         <li class="grids">
                                             <a href="">法令轉載</a>
                                             <ul class="drops">
@@ -120,12 +136,7 @@
                         <section>
                             <div class="sbox1">
                                 <h2>友好連結</h2>
-                                <ul class="style1">
-                                        <li>
-                                            @*<a href="@item.LinkUrl">
-                                                <img src="@item.ImgUrl" alt="Go to" width="200" height="60" border="0">
-                                            </a>*@
-                                        </li>
+                                <ul class="style1" id="linkList">
                                 </ul>
                             </div>
                             @*<div class="sbox2">
