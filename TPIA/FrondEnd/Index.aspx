@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/FrondEnd/Main.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="TPIA.FrondEnd.Index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <%--<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js" type="text/javascript"></script>
+    <%--<script src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function () {
             $('#_container').imagesLoaded(function () {
